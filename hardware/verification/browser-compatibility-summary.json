@@ -1,0 +1,14 @@
+{
+  "passed": 7,
+  "checks": [
+    "/app/index.html: Worker blocked by CSP; both canvases render; WASM pixels match; paused edits and resume work",
+    "/dist/VideoSynth-R1.html: Worker blocked by CSP; both canvases render; WASM pixels match; paused edits and resume work; no external resources",
+    "Missing Worker API: both canvases recover through main-thread WASM",
+    "Worker startup timeout: recovery preserves controls changed during initialization",
+    "WASM 404: explicit failure message without undefined or stuck startup",
+    "WASM invalid: explicit failure message without undefined or stuck startup",
+    "Standalone HTML in an opaque-origin document renders without external resources"
+  ],
+  "pageErrors": [],
+  "scope": "Chromium startup/fallback regression tests; file:// navigation remains blocked by cloud browser policy; no hardware validation"
+}

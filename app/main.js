@@ -1,27 +1,28 @@
 import {OSC_NAMES,SOURCES,MODES,initialState,countRoutes,toggleRoute,moveCursor,slotButton,toggleOsc,toggleScreen,validateState,preset,cvModel} from './model.js';
 import {VIDEO,raster,codeVoltage} from './video.js';
+import {createDSPClient} from './dsp-client.js';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-let state=preset('weave'),running=true,ready=false,field='both',currentTab='instrument',lastLuma=null,lastRgba=null,frames=0,firstFrame=0,lastFrame=0;
+let state=preset('weave'),running=true,ready=false,field='both',currentTab='instrument',lastLuma=null,lastRgba=null,frames=0,firstFrame=0,lastFrame=0,dspMode='worker';
 const output=$('#output').getContext('2d',{alpha:false}),preview=$('#preview').getContext('2d',{alpha:false});
 const frameCanvas=document.createElement('canvas');frameCanvas.width=720;frameCanvas.height=480;const frameContext=frameCanvas.getContext('2d',{alpha:false});
 let toastTimer;
 function toast(message){$('#toast').textContent=message;$('#toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('show'),2800);}
 function send(){if(ready)worker.postMessage({type:'state',state});}
 const workerURL=globalThis.EMBEDDED_WORKER?URL.createObjectURL(new Blob([globalThis.EMBEDDED_WORKER],{type:'text/javascript'})):new URL('./render-worker.js',import.meta.url);
-const worker=new Worker(workerURL,{type:'module'});
-worker.onerror=e=>{$('#loading').textContent='Ошибка DSP: '+e.message;toast('Не удалось запустить DSP. Откройте приложение через npm start или standalone HTML.');};
-worker.onmessage=({data})=>{
+const worker=createDSPClient({workerURL,
+ onStatus:({mode})=>{dspMode=mode;$('#engine-metrics').textContent='Совместимый режим · DSP запускается';},
+ onError:message=>{ready=false;$('#loading').hidden=false;$('#loading').textContent='Не удалось запустить DSP: '+message;$('#engine-metrics').textContent='DSP недоступен';},
+ onMessage:data=>{
  if(data.type==='ready'){ready=true;send();return;}
- if(data.type==='error'){$('#loading').textContent=data.message;return;}
  if(data.type!=='frame')return;
  lastLuma=data.luma;lastRgba=data.rgba;frames++;lastFrame=data.frame;
  if(!firstFrame)firstFrame=performance.now();
  frameContext.putImageData(new ImageData(data.rgba,720,480),0,0);drawOutput();
  if(state.screen==='preview')preview.drawImage(frameCanvas,0,0,320,240);
  $('#loading').hidden=true;
- if(frames%5===0){const fps=frames/((performance.now()-firstFrame)/1000);$('#engine-metrics').textContent=`PC: ${data.renderMs.toFixed(1)} мс / ${Math.min(fps,100).toFixed(1)} кадр/с`;}
+ if(frames%5===0){const fps=frames/((performance.now()-firstFrame)/1000);$('#engine-metrics').textContent=`PC${dspMode==='main'?' · совместимый режим':''}: ${data.renderMs.toFixed(1)} мс / ${Math.min(fps,100).toFixed(1)} кадр/с`;}
  if(currentTab==='checks'&&frames%5===0)drawScope();
-};
+}});
 function drawOutput(){
  if(!lastRgba)return;
  if(field==='both')output.drawImage(frameCanvas,0,0);
@@ -130,4 +131,4 @@ $('#self-test').onclick=selfTest;
 async function loadVerification(){try{const v=globalThis.VERIFICATION||await (await fetch('./assets/verification.json')).json();$('#verification').replaceChildren(...v.checks.map(c=>{const div=document.createElement('div');div.className='verification-line';const label=document.createElement('span');label.textContent=c.label;const value=document.createElement('b');value.textContent=c.result;div.append(label,value);return div;}));}catch{$('#verification').textContent='Отчёт сборки недоступен. Запустите npm test и CAD-проверки из README.';}}
 loadVerification();refresh();
 // Read-only diagnostics for browser smoke tests; mutations use visible controls.
-globalThis.videosynth={getState:()=>structuredClone(state),getFrames:()=>frames,getLuma:()=>lastLuma?.slice(),getReady:()=>ready};
+globalThis.videosynth={getState:()=>structuredClone(state),getFrames:()=>frames,getLuma:()=>lastLuma?.slice(),getReady:()=>ready,getDSPMode:()=>dspMode};

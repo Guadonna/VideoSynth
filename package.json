@@ -1,13 +1,20 @@
 {
-  "name": "videosynth-r1", "version": "0.6.0", "private": true, "type": "module",
+  "name": "videosynth-r1",
+  "version": "0.6.1",
+  "private": true,
+  "type": "module",
   "description": "VideoSynth R1 hardware prototype and portable DSP emulator",
   "scripts": {
     "start": "node scripts/serve.mjs",
     "build": "python3 scripts/build.py && node scripts/bundle.mjs",
     "test": "node --test tests/*.test.mjs",
-    "test:browser": "node tests/browser.mjs",
+    "test:browser": "node tests/browser.mjs && node tests/browser-compatibility.mjs",
     "test:spice": "python3 hardware/simulation/run_spice.py"
   },
-  "devDependencies": {"playwright": "1.62.1"},
-  "engines": {"node": ">=20"}
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }
