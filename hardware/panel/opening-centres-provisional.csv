@@ -1,0 +1,44 @@
+name,panel_x_mm,panel_y_mm,candidate_diameter_mm,note
+H1 FREQ,14.54,26.25,7.2,pot candidate
+H1 FINE,14.54,46.25,7.2,pot candidate
+H1 PHASE,14.54,66.25,7.2,pot candidate
+H1 MORPH,14.54,86.25,7.2,pot candidate
+H2 FREQ,36.54,26.25,7.2,pot candidate
+H2 FINE,36.54,46.25,7.2,pot candidate
+H2 PHASE,36.54,66.25,7.2,pot candidate
+H2 MORPH,36.54,86.25,7.2,pot candidate
+H3 FREQ,58.54,26.25,7.2,pot candidate
+H3 FINE,58.54,46.25,7.2,pot candidate
+H3 PHASE,58.54,66.25,7.2,pot candidate
+H3 MORPH,58.54,86.25,7.2,pot candidate
+V1 FREQ,80.53999999999999,26.25,7.2,pot candidate
+V1 FINE,80.53999999999999,46.25,7.2,pot candidate
+V1 PHASE,80.53999999999999,66.25,7.2,pot candidate
+V1 MORPH,80.53999999999999,86.25,7.2,pot candidate
+V2 FREQ,102.53999999999999,26.25,7.2,pot candidate
+V2 FINE,102.53999999999999,46.25,7.2,pot candidate
+V2 PHASE,102.53999999999999,66.25,7.2,pot candidate
+V2 MORPH,102.53999999999999,86.25,7.2,pot candidate
+V3 FREQ,124.53999999999999,26.25,7.2,pot candidate
+V3 FINE,124.53999999999999,46.25,7.2,pot candidate
+V3 PHASE,124.53999999999999,66.25,7.2,pot candidate
+V3 MORPH,124.53999999999999,86.25,7.2,pot candidate
+OSC1,14.54,104.25,4.0,actuator opening provisional
+OSC2,36.54,104.25,4.0,actuator opening provisional
+OSC3,58.54,104.25,4.0,actuator opening provisional
+OSC4,80.53999999999999,104.25,4.0,actuator opening provisional
+OSC5,102.53999999999999,104.25,4.0,actuator opening provisional
+OSC6,124.53999999999999,104.25,4.0,actuator opening provisional
+LED1,21.54,104.25,2.0,lightpipe opening provisional
+LED2,43.54,104.25,2.0,lightpipe opening provisional
+LED3,65.53999999999999,104.25,2.0,lightpipe opening provisional
+LED4,87.53999999999999,104.25,2.0,lightpipe opening provisional
+LED5,109.53999999999999,104.25,2.0,lightpipe opening provisional
+LED6,131.54,104.25,2.0,lightpipe opening provisional
+ENC X,165.04,74.75,7.2,EC11 shaft offset +7.5/+2.5 from footprint
+ENC Y,193.04,74.75,7.2,EC11 shaft offset +7.5/+2.5 from footprint
+MODE,158.54,92.25,4.0,actuator opening provisional
+SLOT,186.54,92.25,4.0,actuator opening provisional
+CV1,155.54,106.73,6.4,PJ398SM shaft offset +0/+6.48
+CV2,179.54,106.73,6.4,PJ398SM shaft offset +0/+6.48
+OUT,201.54,106.73,8,RCA candidate diameter only

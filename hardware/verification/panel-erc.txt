@@ -1,0 +1,15 @@
+ERC report (2026-10-23T14:10:29+0000, Encoding UTF8)
+
+***** Sheet /
+
+***** Sheet /Panel interface and I2C controls 1/
+
+***** Sheet /Potentiometers and multiplexers 1/
+
+***** Sheet /Potentiometers and multiplexers 2/
+
+***** Sheet /Buttons encoders and display 1/
+
+***** Sheet /Buttons encoders and display 2/
+
+ ** ERC messages: 0  Errors 0  Warnings 0

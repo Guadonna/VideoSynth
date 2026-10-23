@@ -1,0 +1,5 @@
+source,url,bytes,sha256,date
+olimex-manual.pdf,https://raw.githubusercontent.com/OLIMEX/ESP32-P4-DevKit/main/DOCUMENTS/ESP32-P4-DevKit-user-manual.pdf,1070965,2c483e222141116b0b67ebee35cff2d37c508722ef4001027dfcabdf9fab5bda,2026-10-23
+olimex-d1.pdf,https://raw.githubusercontent.com/OLIMEX/ESP32-P4-DevKit/main/HARDWARE/ESP32-P4-DevKit-Rev.D1/ESP32-P4-DevKit_Rev_D1.pdf,2804563,1ce14b47c5717dfc1c98a1e1038ca700ff4b9361ec83cbf8a1feffbe910075f9,2026-10-23
+olimex-d1.kicad_pcb,https://raw.githubusercontent.com/OLIMEX/ESP32-P4-DevKit/main/HARDWARE/ESP32-P4-DevKit-Rev.D1/ESP32-P4-DevKit_Rev_D1.kicad_pcb,3165330,f9c94ac394b475413bf41cf178d2ffb74632bc30449fb0b7bf0892c488cc8081,2026-10-23
+tmux1511.pdf,https://www.ti.com/lit/ds/symlink/tmux1511.pdf,2548204,04291b41a68347fedbbb0776aa44f500eaca65f2ca3af0e022ee60d41c7b1e9f,2026-10-23

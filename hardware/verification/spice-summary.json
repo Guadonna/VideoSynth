@@ -1,0 +1,17 @@
+{
+  "solver": "ngspice shared library",
+  "model_scope": "ideal opamp, linear powered-on CV gain/filter only",
+  "dc_points": 201,
+  "ac_points": 201,
+  "max_dc_error_V": 3.0472492831279396e-06,
+  "attenuation_at_100_Hz_dB": 0.846214223647841,
+  "adc_at_minus10_V": 2.72205999,
+  "adc_at_plus10_V": 0.429798946,
+  "not_simulated": [
+    "power-off CV protection",
+    "semiconductor overload and ESD",
+    "buck switching/transients",
+    "video amplifier parasitics",
+    "MCU/DMA"
+  ]
+}

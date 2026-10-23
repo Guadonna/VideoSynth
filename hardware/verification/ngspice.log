@@ -1,0 +1,13 @@
+stderr Warning: can't find the initialization file spinit.
+stdout ******
+stdout ** ngspice-44.2 shared library
+stdout ** Creation Date: Sun Jan 12 08:19:15 UTC 2025
+stdout ******
+stdout Note: No compatibility mode selected!
+stdout Circuit: videosynth r1 cv1 powered-on small-signal / dc model
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 201
+stdout Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+stdout Using SPARSE 1.3 as Direct Linear Solver
+stdout No. of Data Rows : 201

@@ -1,0 +1,34 @@
+{
+  "revision": "R1-prototype",
+  "date": "2026-10-23",
+  "checks": [
+    {
+      "label": "Core: ERC / DRC / незавершённые связи",
+      "result": "0 / 0 / 0"
+    },
+    {
+      "label": "Panel: ERC / DRC / незавершённые связи",
+      "result": "0 / 0 / 0"
+    },
+    {
+      "label": "Схема ↔ manifest ↔ площадки PCB",
+      "result": "678 / PASS"
+    },
+    {
+      "label": "Автоматические тесты DSP / логики / растра",
+      "result": "19 PASS"
+    },
+    {
+      "label": "Браузерные сценарии",
+      "result": "10 PASS"
+    },
+    {
+      "label": "Линейный CV, SPICE при 100 Гц",
+      "result": "−0.846 дБ"
+    },
+    {
+      "label": "ESP32-P4 / аналоговый выход / защита CV",
+      "result": "НЕ ИЗМЕРЕНО"
+    }
+  ]
+}

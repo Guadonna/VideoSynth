@@ -1,0 +1,56 @@
+{
+  "video": {
+    "frames_per_second": 29.97002997002997,
+    "fields_per_second": 59.94005994005994,
+    "active_pixels_per_second": 10357642.357642358,
+    "DAC_samples_per_second": 27000000,
+    "line_samples": 1716,
+    "line_us": 63.55555555555556,
+    "frame_samples": 900900,
+    "double_raster_buffer_bytes": 1801800,
+    "double_luma_buffer_bytes": 691200,
+    "lcd_RGB565_bytes": 153600,
+    "loaded_sync_to_white_V": 0.9993062827225129,
+    "loaded_sync_to_black_V": 0.28607591623036643
+  },
+  "compute": {
+    "cycles_per_active_pixel_per_400MHz_core": 38.61882716049382,
+    "oscillator_evaluations_per_second": 62145854.145854145,
+    "route_accumulations_per_second_36": 372875124.8751249,
+    "note": "clock and scheduling reserve depend on actual chip revision; no P4 measurement"
+  },
+  "adc": {
+    "cv_samples_per_channel_s": 4000,
+    "pot_scans_per_control_s": 100,
+    "total_conversions_per_s_with_discard": 12800,
+    "spi_1MHz_fraction_at_24_clocks": 0.3072,
+    "CV_adc_V_at_zero": 1.5759312320916905
+  },
+  "power_budget": {
+    "assumed_5V_current_A": [
+      0.4,
+      0.9
+    ],
+    "assumed_efficiency": 0.85,
+    "assumed_input_after_diode_V": 11.7,
+    "estimated_12V_current_A": [
+      0.201,
+      0.452
+    ],
+    "not_measured": true
+  },
+  "cost_USD": {
+    "low": 174.6,
+    "high": 386.4,
+    "excluded": [
+      "tax",
+      "shipping",
+      "front metal panel",
+      "24 knobs",
+      "manual THT labour",
+      "rework",
+      "test equipment"
+    ],
+    "supplier_quote": false
+  }
+}

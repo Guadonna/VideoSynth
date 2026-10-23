@@ -1,0 +1,11 @@
+assembly,quantity,candidate,connection,qualification
+MCU module,1,Olimex ESP32-P4-DevKit Rev.D1,EXT1/EXT2 plus POE_PWR1 4/3,Remove FET2 and qualify USB power isolation
+Display module,1,Waveshare 2.4inch LCD Module,panel J2 eight-pin harness,Confirm exact controller BL input and dimensions
+Composite connector,1,75-ohm panel RCA,core J6 short coax,Select exact panel thread and footprint opening
+Panel harness,1,IDC 20-way 2.54mm pin-to-pin,core J5 to panel J1,Confirm assembly orientation and length
+Display harness,1,8-way TFT harness,panel J2 to TFT labels,Do not assume same numbered pins at module
+Power harness,1,2-way carrier to module,core J2 to Olimex POE_PWR1,Do not connect PoE PW pins
+Eurorack cable,1,10-to-16 or 10-to-10 keyed ribbon,core J1,Red stripe at -12V NC pins 1/2
+Potentiometer knobs,24,To select,6mm shaft subject to selected pot,Check clearance and shaft height
+Metal panel,1,42HP / provisional 213.06x128.5mm,mechanical,Drawing is provisional; exact hardware unqualified
+Standoffs and brackets,1 set,To design after enclosure fit,core/panel/module,No qualified common mounting pattern yet

@@ -1,0 +1,4785 @@
+{
+  "revision": "R1-prototype",
+  "boards": {
+    "core": {
+      "size": [
+        140,
+        105
+      ],
+      "holes": [
+        [
+          4,
+          4
+        ],
+        [
+          136,
+          4
+        ],
+        [
+          24,
+          101
+        ],
+        [
+          136,
+          101
+        ]
+      ],
+      "layers": 4
+    },
+    "panel": {
+      "size": [
+        208.28,
+        108
+      ],
+      "holes": [
+        [
+          3,
+          3
+        ],
+        [
+          205.28,
+          3
+        ],
+        [
+          3,
+          105
+        ],
+        [
+          205.28,
+          105
+        ]
+      ],
+      "layers": 4
+    }
+  },
+  "parts": [
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "J1",
+      "value": "EURORACK_10",
+      "footprint": "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical",
+      "pins": {
+        "1": null,
+        "2": null,
+        "3": "GND",
+        "4": "GND",
+        "5": "GND",
+        "6": "GND",
+        "7": "GND",
+        "8": "GND",
+        "9": "EUR_12",
+        "10": "EUR_12"
+      },
+      "xy": [
+        7,
+        87
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "Stripe = pins 1/2, -12 V NC. Use keyed 10-pin ribbon.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "F1",
+      "value": "750mA HOLD 33V",
+      "footprint": "Fuse:Fuse_1812_4532Metric",
+      "pins": {
+        "1": "EUR_12",
+        "2": "FUSED_12"
+      },
+      "xy": [
+        20,
+        91
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Bourns MF-MSMF075-2",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "D1",
+      "value": "SS34",
+      "footprint": "Diode_SMD:D_SMA",
+      "pins": {
+        "1": "VIN",
+        "2": "FUSED_12"
+      },
+      "xy": [
+        29,
+        91
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "SS34",
+      "note": "Series reverse polarity diode, 40 V",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "D2",
+      "value": "SMBJ15A",
+      "footprint": "Diode_SMD:D_SMB",
+      "pins": {
+        "1": "VIN",
+        "2": "GND"
+      },
+      "xy": [
+        29,
+        84
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "SMBJ15A",
+      "note": "TVS after fuse/series diode; surge qualification required",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "C1",
+      "value": "22u 35V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "VIN",
+        "2": "GND"
+      },
+      "xy": [
+        37,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "GRM32ER7YA226KE15L",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "C2",
+      "value": "100n 50V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "VIN",
+        "2": "GND"
+      },
+      "xy": [
+        49,
+        85
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "U1",
+      "value": "TPS54302DDCR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "GND",
+        "2": "SW",
+        "3": "VIN",
+        "4": "FB",
+        "5": "EN_BUCK",
+        "6": "BOOT"
+      },
+      "xy": [
+        46,
+        88
+      ],
+      "angle": 180,
+      "side": "F",
+      "mpn": "TPS54302DDCR",
+      "note": "",
+      "names": {
+        "1": "GND",
+        "2": "SW",
+        "3": "VIN",
+        "4": "FB",
+        "5": "EN",
+        "6": "BOOT"
+      },
+      "types": {
+        "1": "power_in",
+        "2": "power_out",
+        "3": "power_in",
+        "4": "input",
+        "5": "input",
+        "6": "passive"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "C3",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "BOOT",
+        "2": "SW"
+      },
+      "xy": [
+        43,
+        91
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "L1",
+      "value": "6.8uH verify Isat",
+      "footprint": "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm",
+      "pins": {
+        "1": "SW",
+        "2": "V5"
+      },
+      "xy": [
+        55,
+        88
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "SRP7028A-6R8M",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "C4",
+      "value": "22u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "xy": [
+        64,
+        87
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "C5",
+      "value": "22u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "xy": [
+        64,
+        92
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "R1",
+      "value": "100k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "FB"
+      },
+      "xy": [
+        53,
+        96
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "R2",
+      "value": "13.3k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "FB",
+        "2": "GND"
+      },
+      "xy": [
+        46,
+        96
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "C6",
+      "value": "75p C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "FB"
+      },
+      "xy": [
+        59,
+        96
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "R3",
+      "value": "100k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VIN",
+        "2": "EN_BUCK"
+      },
+      "xy": [
+        37,
+        80
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "R4",
+      "value": "24.9k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "EN_BUCK",
+        "2": "GND"
+      },
+      "xy": [
+        44,
+        77
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "R5",
+      "value": "1k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "xy": [
+        72,
+        92
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "Rail discharge / small fault-current sink; 25 mW nominal",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "J2",
+      "value": "MODULE_5VP_GND",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "xy": [
+        36,
+        72
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "Harness to Olimex POE_PWR1: our pin1 -> module pin4; our pin2 -> module pin3. Pins1/2 PoE never connected.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "#FLG1",
+      "value": "GND",
+      "footprint": "",
+      "pins": {
+        "1": "GND"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "#FLG2",
+      "value": "VIN",
+      "footprint": "",
+      "pins": {
+        "1": "VIN"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "#FLG3",
+      "value": "V5",
+      "footprint": "",
+      "pins": {
+        "1": "V5"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Power",
+      "ref": "#FLG4",
+      "value": "V3V3",
+      "footprint": "",
+      "pins": {
+        "1": "V3V3"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "J3",
+      "value": "OLIMEX_EXT1",
+      "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": null,
+        "4": null,
+        "5": "SPI_SCK",
+        "6": "ADC_CS",
+        "7": "TFT_CS",
+        "8": "I2C_SDA",
+        "9": "I2C_SCL",
+        "10": "VID_D0",
+        "11": "VID_D1",
+        "12": "VID_D2",
+        "13": "VID_D3",
+        "14": "VID_D4",
+        "15": "VID_D5",
+        "16": "VID_D6",
+        "17": "VID_D7",
+        "18": "CLK_P4",
+        "19": "TFT_DC",
+        "20": "TFT_RST"
+      },
+      "xy": [
+        13,
+        67.5
+      ],
+      "angle": 180,
+      "side": "F",
+      "mpn": "",
+      "note": "Olimex ESP32-P4-DevKit Rev.D1 EXT1, top-view exact pin correspondence",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "J4",
+      "value": "OLIMEX_EXT2",
+      "footprint": "Connector_PinSocket_2.54mm:PinSocket_1x20_P2.54mm_Vertical",
+      "pins": {
+        "1": null,
+        "2": "GND",
+        "3": "SPI_MISO",
+        "4": "SPI_MOSI",
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": "DAC_SLEEP",
+        "12": "UI_IRQ2",
+        "13": "UI_IRQ1",
+        "14": null,
+        "15": "GND",
+        "16": null,
+        "17": null,
+        "18": "GND",
+        "19": null,
+        "20": null
+      },
+      "xy": [
+        38.4,
+        67.5
+      ],
+      "angle": 180,
+      "side": "F",
+      "mpn": "",
+      "note": "EXT2 pin1 +5V intentionally NC. Supply through POE_PWR1 only. REMOVE module FET2 to disconnect USB power.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "J5",
+      "value": "PANEL_20",
+      "footprint": "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "I2C_SDA",
+        "4": "I2C_SCL",
+        "5": "UI_IRQ1",
+        "6": "UI_IRQ2",
+        "7": "POT_MUX_A",
+        "8": "GND",
+        "9": "POT_MUX_B",
+        "10": "GND",
+        "11": "TFT_SCK",
+        "12": "TFT_MOSI",
+        "13": "TFT_CS",
+        "14": "TFT_DC",
+        "15": "TFT_RST",
+        "16": "GND",
+        "17": "CV1_RAW",
+        "18": "GND",
+        "19": "CV2_RAW",
+        "20": "GND"
+      },
+      "xy": [
+        128,
+        14
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "Straight-through keyed cable <=50 mm, same pin numbers on panel.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R6",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "SPI_SCK",
+        "2": "TFT_SCK"
+      },
+      "xy": [
+        119,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R7",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "SPI_MOSI",
+        "2": "TFT_MOSI"
+      },
+      "xy": [
+        119,
+        13
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R8",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "I2C_SDA"
+      },
+      "xy": [
+        110,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R9",
+      "value": "2.2k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "I2C_SCL"
+      },
+      "xy": [
+        110,
+        13
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R10",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "UI_IRQ1"
+      },
+      "xy": [
+        101,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R11",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "UI_IRQ2"
+      },
+      "xy": [
+        101,
+        13
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R12",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "ADC_CS"
+      },
+      "xy": [
+        92,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R13",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "TFT_CS"
+      },
+      "xy": [
+        92,
+        13
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "R14",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "DAC_SLEEP"
+      },
+      "xy": [
+        85,
+        59
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Module and panel interface",
+      "ref": "C7",
+      "value": "10u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        118,
+        22
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "Y1",
+      "value": "27.000MHz 3V3",
+      "footprint": "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "CLK27",
+        "4": "V3V3"
+      },
+      "xy": [
+        54,
+        59
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ASE-27.000MHZ-LC-T",
+      "note": "",
+      "names": {
+        "1": "OE",
+        "2": "GND",
+        "3": "OUT",
+        "4": "VDD"
+      },
+      "types": {
+        "1": "input",
+        "2": "power_in",
+        "3": "output",
+        "4": "power_in"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C8",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        48,
+        59
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R15",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CLK27",
+        "2": "CLK_P4"
+      },
+      "xy": [
+        48,
+        53
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "U2",
+      "value": "SN74LVC1G04DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": null,
+        "2": "CLK27",
+        "3": "GND",
+        "4": "CLK_INV",
+        "5": "V3V3"
+      },
+      "xy": [
+        63,
+        60
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "SN74LVC1G04DBVR",
+      "note": "",
+      "names": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "types": {
+        "2": "input",
+        "3": "power_in",
+        "4": "output",
+        "5": "power_in"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C9",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        63,
+        55
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R16",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CLK_INV",
+        "2": "DAC_CLK"
+      },
+      "xy": [
+        69,
+        60
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "U3",
+      "value": "AD9708ARUZ",
+      "footprint": "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm",
+      "pins": {
+        "8": "DAC_D0",
+        "7": "DAC_D1",
+        "6": "DAC_D2",
+        "5": "DAC_D3",
+        "4": "DAC_D4",
+        "3": "DAC_D5",
+        "2": "DAC_D6",
+        "1": "DAC_D7",
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null,
+        "25": null,
+        "15": "DAC_SLEEP",
+        "16": "GND",
+        "17": "DAC_REF",
+        "18": "DAC_FSADJ",
+        "19": "DAC_COMP1",
+        "20": "GND",
+        "21": "DAC_B",
+        "22": "DAC_A",
+        "23": "DAC_COMP2",
+        "24": "V5A",
+        "26": "GND",
+        "27": "V3V3",
+        "28": "DAC_CLK"
+      },
+      "xy": [
+        81,
+        72
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "AD9708ARUZ",
+      "note": "",
+      "names": {
+        "8": "DB0",
+        "7": "DB1",
+        "6": "DB2",
+        "5": "DB3",
+        "4": "DB4",
+        "3": "DB5",
+        "2": "DB6",
+        "1": "DB7",
+        "15": "SLEEP",
+        "16": "REFLO",
+        "17": "REFIO",
+        "18": "FSADJ",
+        "19": "COMP1",
+        "20": "ACOM",
+        "21": "IOUTB",
+        "22": "IOUTA",
+        "23": "COMP2",
+        "24": "AVDD",
+        "26": "DCOM",
+        "27": "DVDD",
+        "28": "CLOCK"
+      },
+      "types": {
+        "1": "input",
+        "2": "input",
+        "3": "input",
+        "4": "input",
+        "5": "input",
+        "6": "input",
+        "7": "input",
+        "8": "input",
+        "15": "input",
+        "20": "power_in",
+        "21": "output",
+        "22": "output",
+        "24": "power_in",
+        "26": "power_in",
+        "27": "power_in",
+        "28": "input"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R17",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D0",
+        "2": "DAC_D0"
+      },
+      "xy": [
+        47,
+        20
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R18",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D1",
+        "2": "DAC_D1"
+      },
+      "xy": [
+        54,
+        20
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R19",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D2",
+        "2": "DAC_D2"
+      },
+      "xy": [
+        47,
+        26
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R20",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D3",
+        "2": "DAC_D3"
+      },
+      "xy": [
+        54,
+        26
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R21",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D4",
+        "2": "DAC_D4"
+      },
+      "xy": [
+        47,
+        32
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R22",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D5",
+        "2": "DAC_D5"
+      },
+      "xy": [
+        54,
+        32
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R23",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D6",
+        "2": "DAC_D6"
+      },
+      "xy": [
+        47,
+        38
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R24",
+      "value": "33",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VID_D7",
+        "2": "DAC_D7"
+      },
+      "xy": [
+        54,
+        38
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R25",
+      "value": "1 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "V5A"
+      },
+      "xy": [
+        74,
+        85
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C10",
+      "value": "22u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5A",
+        "2": "GND"
+      },
+      "xy": [
+        82,
+        86
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C11",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5A",
+        "2": "GND"
+      },
+      "xy": [
+        91,
+        75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C12",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        71,
+        71
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C13",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DAC_REF",
+        "2": "GND"
+      },
+      "xy": [
+        78,
+        81
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R26",
+      "value": "1.91k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "DAC_FSADJ",
+        "2": "GND"
+      },
+      "xy": [
+        88,
+        82
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C14",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DAC_COMP1",
+        "2": "V5A"
+      },
+      "xy": [
+        94,
+        81
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C15",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "DAC_COMP2",
+        "2": "GND"
+      },
+      "xy": [
+        96,
+        69
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R27",
+      "value": "49.9 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "DAC_B",
+        "2": "GND"
+      },
+      "xy": [
+        92,
+        63
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R28",
+      "value": "49.9 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "DAC_A",
+        "2": "GND"
+      },
+      "xy": [
+        103,
+        70
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "U4",
+      "value": "THS7314D",
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pins": {
+        "1": "DAC_A",
+        "2": "GND",
+        "3": "GND",
+        "4": "V5A",
+        "5": "GND",
+        "6": null,
+        "7": null,
+        "8": "VIDEO_DRV"
+      },
+      "xy": [
+        115,
+        73
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "THS7314D",
+      "note": "Gain 2, 8.5MHz fifth-order LPF, +285mV output level shift",
+      "names": {
+        "1": "IN1",
+        "2": "IN2",
+        "3": "IN3",
+        "4": "VS",
+        "5": "GND",
+        "6": "OUT3",
+        "7": "OUT2",
+        "8": "OUT1"
+      },
+      "types": {
+        "1": "input",
+        "2": "input",
+        "3": "input",
+        "4": "power_in",
+        "5": "power_in",
+        "6": "output",
+        "7": "output",
+        "8": "output"
+      }
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C16",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5A",
+        "2": "GND"
+      },
+      "xy": [
+        115,
+        67
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "C17",
+      "value": "10u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5A",
+        "2": "GND"
+      },
+      "xy": [
+        115,
+        81
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "R29",
+      "value": "75 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "VIDEO_DRV",
+        "2": "CVBS"
+      },
+      "xy": [
+        125,
+        73
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "J6",
+      "value": "CVBS_COAX",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "pins": {
+        "1": "CVBS",
+        "2": "GND"
+      },
+      "xy": [
+        134,
+        73
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "Short 75 ohm coax to panel RCA; no second 75 ohm shunt on PCB.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "TP1",
+      "value": "DAC_A",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "DAC_A"
+      },
+      "xy": [
+        103,
+        65
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "TP2",
+      "value": "CVBS",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "CVBS"
+      },
+      "xy": [
+        132,
+        82
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "TP3",
+      "value": "CLK_P4",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "CLK_P4"
+      },
+      "xy": [
+        46,
+        47
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "Video DAC and clock",
+      "ref": "#FLG5",
+      "value": "V5A",
+      "footprint": "",
+      "pins": {
+        "1": "V5A"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R30",
+      "value": "12.4k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "CV_BIAS"
+      },
+      "xy": [
+        65,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R31",
+      "value": "10k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV_BIAS",
+        "2": "GND"
+      },
+      "xy": [
+        73,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C18",
+      "value": "1u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CV_BIAS",
+        "2": "GND"
+      },
+      "xy": [
+        81,
+        8
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R32",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV1_RAW",
+        "2": "CV1_INV"
+      },
+      "xy": [
+        58,
+        20
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R33",
+      "value": "12k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV1_INV",
+        "2": "CV1_AMP"
+      },
+      "xy": [
+        68,
+        31
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C19",
+      "value": "47n 5% X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CV1_INV",
+        "2": "CV1_AMP"
+      },
+      "xy": [
+        68,
+        36
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R34",
+      "value": "4.7k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV1_AMP",
+        "2": "CV1_FILTER"
+      },
+      "xy": [
+        76,
+        31
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C20",
+      "value": "100n 5% X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CV1_FILTER",
+        "2": "GND"
+      },
+      "xy": [
+        76,
+        36
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "D3",
+      "value": "BAT54S",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "GND",
+        "2": "V3V3",
+        "3": "CV1_FILTER"
+      },
+      "xy": [
+        76,
+        42
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "BAT54S",
+      "note": "Series pair clamp. Exact forward voltage and power-off behavior require bench test.",
+      "names": {
+        "1": "A1",
+        "2": "K2",
+        "3": "K1_A2"
+      },
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "U5",
+      "value": "OPA2197IDR",
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pins": {
+        "1": "CV1_AMP",
+        "2": "CV1_INV",
+        "3": "CV_BIAS",
+        "4": "GND",
+        "5": "POT_MUX_A",
+        "6": "POTBUF_1",
+        "7": "POTBUF_1",
+        "8": "V5"
+      },
+      "xy": [
+        68,
+        24
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "OPA2197IDR",
+      "note": "",
+      "names": {
+        "1": "OUT_A",
+        "2": "IN_A-",
+        "3": "IN_A+",
+        "4": "V-",
+        "5": "IN_B+",
+        "6": "IN_B-",
+        "7": "OUT_B",
+        "8": "V+"
+      },
+      "types": {
+        "1": "output",
+        "2": "input",
+        "3": "input",
+        "4": "power_in",
+        "5": "input",
+        "6": "input",
+        "7": "output",
+        "8": "power_in"
+      }
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C21",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "xy": [
+        64,
+        15
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R35",
+      "value": "47",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "POTBUF_1",
+        "2": "POT_ADC1"
+      },
+      "xy": [
+        58,
+        42
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C22",
+      "value": "1n C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "POT_ADC1",
+        "2": "GND"
+      },
+      "xy": [
+        58,
+        47
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R36",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV2_RAW",
+        "2": "CV2_INV"
+      },
+      "xy": [
+        88,
+        20
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R37",
+      "value": "12k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV2_INV",
+        "2": "CV2_AMP"
+      },
+      "xy": [
+        98,
+        31
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C23",
+      "value": "47n 5% X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CV2_INV",
+        "2": "CV2_AMP"
+      },
+      "xy": [
+        98,
+        36
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R38",
+      "value": "4.7k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV2_AMP",
+        "2": "CV2_FILTER"
+      },
+      "xy": [
+        106,
+        31
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C24",
+      "value": "100n 5% X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CV2_FILTER",
+        "2": "GND"
+      },
+      "xy": [
+        106,
+        36
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "D4",
+      "value": "BAT54S",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "GND",
+        "2": "V3V3",
+        "3": "CV2_FILTER"
+      },
+      "xy": [
+        106,
+        42
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "BAT54S",
+      "note": "Series pair clamp. Exact forward voltage and power-off behavior require bench test.",
+      "names": {
+        "1": "A1",
+        "2": "K2",
+        "3": "K1_A2"
+      },
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "U6",
+      "value": "OPA2197IDR",
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pins": {
+        "1": "CV2_AMP",
+        "2": "CV2_INV",
+        "3": "CV_BIAS",
+        "4": "GND",
+        "5": "POT_MUX_B",
+        "6": "POTBUF_2",
+        "7": "POTBUF_2",
+        "8": "V5"
+      },
+      "xy": [
+        98,
+        24
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "OPA2197IDR",
+      "note": "",
+      "names": {
+        "1": "OUT_A",
+        "2": "IN_A-",
+        "3": "IN_A+",
+        "4": "V-",
+        "5": "IN_B+",
+        "6": "IN_B-",
+        "7": "OUT_B",
+        "8": "V+"
+      },
+      "types": {
+        "1": "output",
+        "2": "input",
+        "3": "input",
+        "4": "power_in",
+        "5": "input",
+        "6": "input",
+        "7": "output",
+        "8": "power_in"
+      }
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C25",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "xy": [
+        94,
+        15
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R39",
+      "value": "47",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "POTBUF_2",
+        "2": "POT_ADC2"
+      },
+      "xy": [
+        88,
+        42
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C26",
+      "value": "1n C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "POT_ADC2",
+        "2": "GND"
+      },
+      "xy": [
+        88,
+        47
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R40",
+      "value": "1k 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        111,
+        38
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "3.3 mA bleeder absorbs specified clamp-current budget; not a replacement for power-off test",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "U7",
+      "value": "TMUX1511PWR",
+      "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "pins": {
+        "1": "V3V3",
+        "2": "CV1_FILTER",
+        "3": "CV1_ADC",
+        "4": "V3V3",
+        "5": "CV2_FILTER",
+        "6": "CV2_ADC",
+        "7": "GND",
+        "8": null,
+        "9": "GND",
+        "10": "GND",
+        "11": null,
+        "12": "GND",
+        "13": "GND",
+        "14": "V3V3"
+      },
+      "xy": [
+        119,
+        36
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "TMUX1511PWR",
+      "note": "Powered-off isolation valid only for signal nodes 0..3.6V; verify both CV fault polarities.",
+      "names": {
+        "1": "SEL1",
+        "2": "S1",
+        "3": "D1",
+        "4": "SEL2",
+        "5": "S2",
+        "6": "D2",
+        "7": "GND",
+        "8": "D3",
+        "9": "S3",
+        "10": "SEL3",
+        "11": "D4",
+        "12": "S4",
+        "13": "SEL4",
+        "14": "VDD"
+      },
+      "types": {
+        "1": "input",
+        "4": "input",
+        "7": "power_in",
+        "10": "input",
+        "13": "input",
+        "14": "power_in"
+      }
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C27",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        117,
+        43
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R41",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV1_ADC",
+        "2": "GND"
+      },
+      "xy": [
+        124,
+        47
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "R42",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CV2_ADC",
+        "2": "GND"
+      },
+      "xy": [
+        132,
+        47
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "U8",
+      "value": "MCP3204-CI/SL",
+      "footprint": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+      "pins": {
+        "1": "POT_ADC1",
+        "2": "POT_ADC2",
+        "3": "CV1_ADC",
+        "4": "CV2_ADC",
+        "5": null,
+        "6": null,
+        "7": "GND",
+        "8": "ADC_CS",
+        "9": "SPI_MOSI",
+        "10": "SPI_MISO",
+        "11": "SPI_SCK",
+        "12": "GND",
+        "13": "V3V3",
+        "14": "V3V3"
+      },
+      "xy": [
+        104,
+        52
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "MCP3204-CI/SL",
+      "note": "",
+      "names": {
+        "1": "CH0",
+        "2": "CH1",
+        "3": "CH2",
+        "4": "CH3",
+        "5": "NC",
+        "6": "NC",
+        "7": "DGND",
+        "8": "CS",
+        "9": "DIN",
+        "10": "DOUT",
+        "11": "CLK",
+        "12": "AGND",
+        "13": "VREF",
+        "14": "VDD"
+      },
+      "types": {
+        "1": "input",
+        "2": "input",
+        "3": "input",
+        "4": "input",
+        "7": "power_in",
+        "8": "input",
+        "9": "input",
+        "10": "tri_state",
+        "11": "input",
+        "12": "power_in",
+        "13": "power_in",
+        "14": "power_in"
+      }
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C28",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        96,
+        52
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "C29",
+      "value": "1u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        96,
+        57
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "TP4",
+      "value": "V5",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "V5"
+      },
+      "xy": [
+        72,
+        96
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "TP5",
+      "value": "V3V3",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "V3V3"
+      },
+      "xy": [
+        118,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "TP6",
+      "value": "GND",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "GND"
+      },
+      "xy": [
+        126,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "TP7",
+      "value": "CV1_ADC",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "CV1_ADC"
+      },
+      "xy": [
+        120,
+        53
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "core",
+      "group": "CV protection and control ADC",
+      "ref": "TP8",
+      "value": "CV2_ADC",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pins": {
+        "1": "CV2_ADC"
+      },
+      "xy": [
+        129,
+        53
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "J1",
+      "value": "CORE_20",
+      "footprint": "Connector_IDC:IDC-Header_2x10_P2.54mm_Vertical",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "I2C_SDA",
+        "4": "I2C_SCL",
+        "5": "UI_IRQ1",
+        "6": "UI_IRQ2",
+        "7": "POT_MUX_A",
+        "8": "GND",
+        "9": "POT_MUX_B",
+        "10": "GND",
+        "11": "TFT_SCK",
+        "12": "TFT_MOSI",
+        "13": "TFT_CS",
+        "14": "TFT_DC",
+        "15": "TFT_RST",
+        "16": "GND",
+        "17": "CV1_RAW",
+        "18": "GND",
+        "19": "CV2_RAW",
+        "20": "GND"
+      },
+      "xy": [
+        194,
+        8
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "Pin-for-pin cable to core PANEL_20, inspect pin1 on both faces",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "#FLG1",
+      "value": "V3V3",
+      "footprint": "",
+      "pins": {
+        "1": "V3V3"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "#FLG2",
+      "value": "GND",
+      "footprint": "",
+      "pins": {
+        "1": "GND"
+      },
+      "xy": [
+        0,
+        0
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "ERC power source assertion; no physical part",
+      "names": {},
+      "types": {
+        "1": "power_out"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "C1",
+      "value": "10u 10V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        185,
+        8
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "U1",
+      "value": "MCP23017-E/SO",
+      "footprint": "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm",
+      "pins": {
+        "1": "LED0",
+        "2": "LED1",
+        "3": "LED2",
+        "4": "LED3",
+        "5": "LED4",
+        "6": "LED5",
+        "7": "BL_GATE",
+        "8": null,
+        "9": "V3V3",
+        "10": "GND",
+        "11": null,
+        "12": "I2C_SCL",
+        "13": "I2C_SDA",
+        "14": null,
+        "15": "GND",
+        "16": "GND",
+        "17": "GND",
+        "18": "UI_RESET",
+        "19": null,
+        "20": "UI_IRQ1",
+        "21": "BUTTON0",
+        "22": "BUTTON1",
+        "23": "BUTTON2",
+        "24": "BUTTON3",
+        "25": "BUTTON4",
+        "26": "BUTTON5",
+        "27": "BUTTON6",
+        "28": "BUTTON7"
+      },
+      "xy": [
+        156,
+        24
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "MCP23017-E/SO",
+      "note": "I2C address 0x20; IRQ open-drain active-low; configure output latches before direction.",
+      "names": {
+        "9": "VDD",
+        "10": "VSS",
+        "11": "NC",
+        "12": "SCL",
+        "13": "SDA",
+        "14": "NC",
+        "15": "A0",
+        "16": "A1",
+        "17": "A2",
+        "18": "RESET",
+        "19": "INTB",
+        "20": "INTA",
+        "1": "GPB0",
+        "21": "GPA0",
+        "2": "GPB1",
+        "22": "GPA1",
+        "3": "GPB2",
+        "23": "GPA2",
+        "4": "GPB3",
+        "24": "GPA3",
+        "5": "GPB4",
+        "25": "GPA4",
+        "6": "GPB5",
+        "26": "GPA5",
+        "7": "GPB6",
+        "27": "GPA6",
+        "8": "GPB7",
+        "28": "GPA7"
+      },
+      "types": {
+        "9": "power_in",
+        "10": "power_in",
+        "12": "input",
+        "13": "bidirectional",
+        "15": "input",
+        "16": "input",
+        "17": "input",
+        "18": "input",
+        "19": "open_collector",
+        "20": "open_collector",
+        "1": "bidirectional",
+        "2": "bidirectional",
+        "3": "bidirectional",
+        "4": "bidirectional",
+        "5": "bidirectional",
+        "6": "bidirectional",
+        "7": "bidirectional",
+        "8": "bidirectional",
+        "21": "bidirectional",
+        "22": "bidirectional",
+        "23": "bidirectional",
+        "24": "bidirectional",
+        "25": "bidirectional",
+        "26": "bidirectional",
+        "27": "bidirectional",
+        "28": "bidirectional"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "C2",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        146,
+        24
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "U2",
+      "value": "MCP23017-E/SO",
+      "footprint": "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm",
+      "pins": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": "V3V3",
+        "10": "GND",
+        "11": null,
+        "12": "I2C_SCL",
+        "13": "I2C_SDA",
+        "14": null,
+        "15": "V3V3",
+        "16": "GND",
+        "17": "GND",
+        "18": "UI_RESET",
+        "19": null,
+        "20": "UI_IRQ2",
+        "21": "MUX_S0",
+        "22": "MUX_S1",
+        "23": "MUX_S2",
+        "24": "MUX_S3",
+        "25": "ENC_X_A",
+        "26": "ENC_X_B",
+        "27": "ENC_Y_A",
+        "28": "ENC_Y_B"
+      },
+      "xy": [
+        181,
+        24
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "MCP23017-E/SO",
+      "note": "I2C address 0x21; IRQ open-drain active-low; configure output latches before direction.",
+      "names": {
+        "9": "VDD",
+        "10": "VSS",
+        "11": "NC",
+        "12": "SCL",
+        "13": "SDA",
+        "14": "NC",
+        "15": "A0",
+        "16": "A1",
+        "17": "A2",
+        "18": "RESET",
+        "19": "INTB",
+        "20": "INTA",
+        "1": "GPB0",
+        "21": "GPA0",
+        "2": "GPB1",
+        "22": "GPA1",
+        "3": "GPB2",
+        "23": "GPA2",
+        "4": "GPB3",
+        "24": "GPA3",
+        "5": "GPB4",
+        "25": "GPA4",
+        "6": "GPB5",
+        "26": "GPA5",
+        "7": "GPB6",
+        "27": "GPA6",
+        "8": "GPB7",
+        "28": "GPA7"
+      },
+      "types": {
+        "9": "power_in",
+        "10": "power_in",
+        "12": "input",
+        "13": "bidirectional",
+        "15": "input",
+        "16": "input",
+        "17": "input",
+        "18": "input",
+        "19": "open_collector",
+        "20": "open_collector",
+        "1": "bidirectional",
+        "2": "bidirectional",
+        "3": "bidirectional",
+        "4": "bidirectional",
+        "5": "bidirectional",
+        "6": "bidirectional",
+        "7": "bidirectional",
+        "8": "bidirectional",
+        "21": "bidirectional",
+        "22": "bidirectional",
+        "23": "bidirectional",
+        "24": "bidirectional",
+        "25": "bidirectional",
+        "26": "bidirectional",
+        "27": "bidirectional",
+        "28": "bidirectional"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "C3",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        171,
+        24
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "R1",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "UI_RESET"
+      },
+      "xy": [
+        187,
+        88
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "C4",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "UI_RESET",
+        "2": "GND"
+      },
+      "xy": [
+        187,
+        94
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "R2",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "MUX_S0",
+        "2": "GND"
+      },
+      "xy": [
+        137,
+        20
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "R3",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "MUX_S1",
+        "2": "GND"
+      },
+      "xy": [
+        137,
+        26
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "R4",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "MUX_S2",
+        "2": "GND"
+      },
+      "xy": [
+        137,
+        32
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Panel interface and I2C controls",
+      "ref": "R5",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "MUX_S3",
+        "2": "GND"
+      },
+      "xy": [
+        137,
+        38
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV1",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT00",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        5,
+        13.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H1 frequency; shaft=(12,16) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV2",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT01",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        5,
+        33.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H1 fine; shaft=(12,36) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV3",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT02",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        5,
+        53.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H1 phase; shaft=(12,56) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV4",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT03",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        5,
+        73.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H1 morph; shaft=(12,76) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV5",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT04",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        27,
+        13.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H2 frequency; shaft=(34,16) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV6",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT05",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        27,
+        33.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H2 fine; shaft=(34,36) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV7",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT06",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        27,
+        53.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H2 phase; shaft=(34,56) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV8",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT07",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        27,
+        73.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H2 morph; shaft=(34,76) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV9",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT08",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        49,
+        13.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H3 frequency; shaft=(56,16) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV10",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT09",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        49,
+        33.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H3 fine; shaft=(56,36) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV11",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT10",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        49,
+        53.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H3 phase; shaft=(56,56) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV12",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT11",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        49,
+        73.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "H3 morph; shaft=(56,76) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV13",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT12",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        71,
+        13.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V1 frequency; shaft=(78,16) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV14",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT13",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        71,
+        33.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V1 fine; shaft=(78,36) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV15",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT14",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        71,
+        53.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V1 phase; shaft=(78,56) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV16",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT15",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        71,
+        73.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V1 morph; shaft=(78,76) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV17",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT16",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        93,
+        13.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V2 frequency; shaft=(100,16) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV18",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT17",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        93,
+        33.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V2 fine; shaft=(100,36) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV19",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT18",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        93,
+        53.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V2 phase; shaft=(100,56) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV20",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT19",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        93,
+        73.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V2 morph; shaft=(100,76) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV21",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT20",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        115,
+        13.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V3 frequency; shaft=(122,16) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV22",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT21",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        115,
+        33.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V3 fine; shaft=(122,36) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV23",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT22",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        115,
+        53.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V3 phase; shaft=(122,56) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "RV24",
+      "value": "10k B linear",
+      "footprint": "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical",
+      "pins": {
+        "1": "GND",
+        "2": "POT23",
+        "3": "V3V3",
+        "MP": "GND"
+      },
+      "xy": [
+        115,
+        73.5
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS RK09K1130A6S",
+      "note": "V3 morph; shaft=(122,76) mm",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "U3",
+      "value": "CD74HC4067M96",
+      "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm",
+      "pins": {
+        "1": "POT_MUX_A",
+        "10": "MUX_S0",
+        "11": "MUX_S1",
+        "12": "GND",
+        "13": "MUX_S3",
+        "14": "MUX_S2",
+        "15": "GND",
+        "24": "V3V3",
+        "9": "POT00",
+        "8": "POT01",
+        "7": "POT02",
+        "6": "POT03",
+        "5": "POT04",
+        "4": "POT05",
+        "3": "POT06",
+        "2": "POT07",
+        "23": "POT08",
+        "22": "POT09",
+        "21": "POT10",
+        "20": "POT11",
+        "19": "GND",
+        "18": "GND",
+        "17": "GND",
+        "16": "GND"
+      },
+      "xy": [
+        45,
+        46
+      ],
+      "angle": 90,
+      "side": "B",
+      "mpn": "CD74HC4067M96",
+      "note": "",
+      "names": {
+        "1": "COM",
+        "10": "S0",
+        "11": "S1",
+        "12": "GND",
+        "13": "S3",
+        "14": "S2",
+        "15": "EN_N",
+        "24": "VCC",
+        "9": "CH0",
+        "8": "CH1",
+        "7": "CH2",
+        "6": "CH3",
+        "5": "CH4",
+        "4": "CH5",
+        "3": "CH6",
+        "2": "CH7",
+        "23": "CH8",
+        "22": "CH9",
+        "21": "CH10",
+        "20": "CH11",
+        "19": "CH12",
+        "18": "CH13",
+        "17": "CH14",
+        "16": "CH15"
+      },
+      "types": {
+        "10": "input",
+        "11": "input",
+        "12": "power_in",
+        "13": "input",
+        "14": "input",
+        "15": "input",
+        "24": "power_in"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "C5",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        55,
+        46
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "U4",
+      "value": "CD74HC4067M96",
+      "footprint": "Package_SO:SOIC-24W_7.5x15.4mm_P1.27mm",
+      "pins": {
+        "1": "POT_MUX_B",
+        "10": "MUX_S0",
+        "11": "MUX_S1",
+        "12": "GND",
+        "13": "MUX_S3",
+        "14": "MUX_S2",
+        "15": "GND",
+        "24": "V3V3",
+        "9": "POT12",
+        "8": "POT13",
+        "7": "POT14",
+        "6": "POT15",
+        "5": "POT16",
+        "4": "POT17",
+        "3": "POT18",
+        "2": "POT19",
+        "23": "POT20",
+        "22": "POT21",
+        "21": "POT22",
+        "20": "POT23",
+        "19": "GND",
+        "18": "GND",
+        "17": "GND",
+        "16": "GND"
+      },
+      "xy": [
+        111,
+        46
+      ],
+      "angle": 90,
+      "side": "B",
+      "mpn": "CD74HC4067M96",
+      "note": "",
+      "names": {
+        "1": "COM",
+        "10": "S0",
+        "11": "S1",
+        "12": "GND",
+        "13": "S3",
+        "14": "S2",
+        "15": "EN_N",
+        "24": "VCC",
+        "9": "CH0",
+        "8": "CH1",
+        "7": "CH2",
+        "6": "CH3",
+        "5": "CH4",
+        "4": "CH5",
+        "3": "CH6",
+        "2": "CH7",
+        "23": "CH8",
+        "22": "CH9",
+        "21": "CH10",
+        "20": "CH11",
+        "19": "CH12",
+        "18": "CH13",
+        "17": "CH14",
+        "16": "CH15"
+      },
+      "types": {
+        "10": "input",
+        "11": "input",
+        "12": "power_in",
+        "13": "input",
+        "14": "input",
+        "15": "input",
+        "24": "power_in"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Potentiometers and multiplexers",
+      "ref": "C6",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        121,
+        46
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW1",
+      "value": "OSC1",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON0",
+        "2": "GND"
+      },
+      "xy": [
+        8.75,
+        91.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R6",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON0"
+      },
+      "xy": [
+        12,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "D1",
+      "value": "LED green",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pins": {
+        "1": "LED0",
+        "2": "LED_A0"
+      },
+      "xy": [
+        19,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "LTST-C190KGKT",
+      "note": "",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R7",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "LED_A0"
+      },
+      "xy": [
+        19,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW2",
+      "value": "OSC2",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON1",
+        "2": "GND"
+      },
+      "xy": [
+        30.75,
+        91.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R8",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON1"
+      },
+      "xy": [
+        34,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "D2",
+      "value": "LED green",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pins": {
+        "1": "LED1",
+        "2": "LED_A1"
+      },
+      "xy": [
+        41,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "LTST-C190KGKT",
+      "note": "",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R9",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "LED_A1"
+      },
+      "xy": [
+        41,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW3",
+      "value": "OSC3",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON2",
+        "2": "GND"
+      },
+      "xy": [
+        52.75,
+        91.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R10",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON2"
+      },
+      "xy": [
+        56,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "D3",
+      "value": "LED green",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pins": {
+        "1": "LED2",
+        "2": "LED_A2"
+      },
+      "xy": [
+        63,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "LTST-C190KGKT",
+      "note": "",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R11",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "LED_A2"
+      },
+      "xy": [
+        63,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW4",
+      "value": "OSC4",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON3",
+        "2": "GND"
+      },
+      "xy": [
+        74.75,
+        91.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R12",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON3"
+      },
+      "xy": [
+        78,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "D4",
+      "value": "LED green",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pins": {
+        "1": "LED3",
+        "2": "LED_A3"
+      },
+      "xy": [
+        85,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "LTST-C190KGKT",
+      "note": "",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R13",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "LED_A3"
+      },
+      "xy": [
+        85,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW5",
+      "value": "OSC5",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON4",
+        "2": "GND"
+      },
+      "xy": [
+        96.75,
+        91.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R14",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON4"
+      },
+      "xy": [
+        100,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "D5",
+      "value": "LED green",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pins": {
+        "1": "LED4",
+        "2": "LED_A4"
+      },
+      "xy": [
+        107,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "LTST-C190KGKT",
+      "note": "",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R15",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "LED_A4"
+      },
+      "xy": [
+        107,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW6",
+      "value": "OSC6",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON5",
+        "2": "GND"
+      },
+      "xy": [
+        118.75,
+        91.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R16",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON5"
+      },
+      "xy": [
+        122,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "D6",
+      "value": "LED green",
+      "footprint": "LED_SMD:LED_0603_1608Metric",
+      "pins": {
+        "1": "LED5",
+        "2": "LED_A5"
+      },
+      "xy": [
+        129,
+        94
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "LTST-C190KGKT",
+      "note": "",
+      "names": {
+        "1": "K",
+        "2": "A"
+      },
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R17",
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "LED_A5"
+      },
+      "xy": [
+        129,
+        100
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW7",
+      "value": "MODE",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON6",
+        "2": "GND"
+      },
+      "xy": [
+        152.75,
+        79.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R18",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON6"
+      },
+      "xy": [
+        156,
+        90
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "SW8",
+      "value": "SLOT",
+      "footprint": "Button_Switch_THT:SW_PUSH_6mm",
+      "pins": {
+        "1": "BUTTON7",
+        "2": "GND"
+      },
+      "xy": [
+        180.75,
+        79.75
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "Omron B3F-1000",
+      "note": "Momentary; latched in software",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R19",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "BUTTON7"
+      },
+      "xy": [
+        184,
+        90
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "ENC1",
+      "value": "EC11E1534408",
+      "footprint": "Rotary_Encoder:RotaryEncoder_Alps_EC11E_Vertical_H20mm",
+      "pins": {
+        "A": "ENC_X_A",
+        "B": "ENC_X_B",
+        "C": "GND",
+        "MP": "GND"
+      },
+      "xy": [
+        155,
+        62
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS EC11E1534408",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R20",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "ENC_X_A"
+      },
+      "xy": [
+        151,
+        69
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "C7",
+      "value": "10n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "ENC_X_A",
+        "2": "GND"
+      },
+      "xy": [
+        151,
+        74
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R21",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "ENC_X_B"
+      },
+      "xy": [
+        159,
+        69
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "C8",
+      "value": "10n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "ENC_X_B",
+        "2": "GND"
+      },
+      "xy": [
+        159,
+        74
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "ENC2",
+      "value": "EC11E1534408",
+      "footprint": "Rotary_Encoder:RotaryEncoder_Alps_EC11E_Vertical_H20mm",
+      "pins": {
+        "A": "ENC_Y_A",
+        "B": "ENC_Y_B",
+        "C": "GND",
+        "MP": "GND"
+      },
+      "xy": [
+        183,
+        62
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "ALPS EC11E1534408",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R22",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "ENC_Y_A"
+      },
+      "xy": [
+        179,
+        69
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "C9",
+      "value": "10n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "ENC_Y_A",
+        "2": "GND"
+      },
+      "xy": [
+        179,
+        74
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R23",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "ENC_Y_B"
+      },
+      "xy": [
+        187,
+        69
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "C10",
+      "value": "10n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "ENC_Y_B",
+        "2": "GND"
+      },
+      "xy": [
+        187,
+        74
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "J2",
+      "value": "TFT_SPI_3V3",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND",
+        "3": "TFT_MOSI",
+        "4": "TFT_SCK",
+        "5": "TFT_CS",
+        "6": "TFT_DC",
+        "7": "TFT_RST",
+        "8": "TFT_BL"
+      },
+      "xy": [
+        143,
+        12
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "",
+      "note": "Harness: Waveshare 2.4inch LCD Module: VCC GND DIN CLK CS DC RST BL. Confirm ordered revision before assembly.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "U5",
+      "value": "SN74LVC1G125DBVR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+      "pins": {
+        "1": "GND",
+        "2": "BL_GATE",
+        "3": "GND",
+        "4": "TFT_BL",
+        "5": "V3V3"
+      },
+      "xy": [
+        154,
+        40
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "SN74LVC1G125DBVR",
+      "note": "",
+      "names": {
+        "1": "OE_N",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "types": {
+        "1": "input",
+        "2": "input",
+        "3": "power_in",
+        "4": "output",
+        "5": "power_in"
+      }
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "R24",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "BL_GATE",
+        "2": "GND"
+      },
+      "xy": [
+        164,
+        40
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "C11",
+      "value": "100n 16V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "V3V3",
+        "2": "GND"
+      },
+      "xy": [
+        154,
+        46
+      ],
+      "angle": 0,
+      "side": "B",
+      "mpn": "",
+      "note": "",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "J3",
+      "value": "CV1",
+      "footprint": "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles",
+      "pins": {
+        "T": "CV1_RAW",
+        "TN": "GND",
+        "S": "GND"
+      },
+      "xy": [
+        153,
+        90
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "WQP-PJ398SM",
+      "note": "Verify physical sleeve/tip orientation. Normalling contact tied to GND makes unplugged CV 0 V.",
+      "names": {},
+      "types": {}
+    },
+    {
+      "board": "panel",
+      "group": "Buttons encoders and display",
+      "ref": "J4",
+      "value": "CV2",
+      "footprint": "Connector_Audio:Jack_3.5mm_QingPu_WQP-PJ398SM_Vertical_CircularHoles",
+      "pins": {
+        "T": "CV2_RAW",
+        "TN": "GND",
+        "S": "GND"
+      },
+      "xy": [
+        177,
+        90
+      ],
+      "angle": 0,
+      "side": "F",
+      "mpn": "WQP-PJ398SM",
+      "note": "Verify physical sleeve/tip orientation. Normalling contact tied to GND makes unplugged CV 0 V.",
+      "names": {},
+      "types": {}
+    }
+  ]
+}

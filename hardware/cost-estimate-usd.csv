@@ -1,0 +1,14 @@
+group,quantity,unit_low_USD,unit_high_USD,line_low_USD,line_high_USD,basis
+ESP32-P4-DevKit module,1,25,40,25,40,planning assumption; NOT a supplier quote
+AD9708 + THS7314 + 27MHz clock + logic,1,13,26,13,26,planning assumption; NOT a supplier quote
+CV opamps + TMUX1511 + MCP3204,1,10,19,10,19,planning assumption; NOT a supplier quote
+MCP23017 x2 + CD74HC4067 x2,1,5,11,5,11,planning assumption; NOT a supplier quote
+TPS54302 + inductor + protection,1,4,9,4,9,planning assumption; NOT a supplier quote
+Passive components + LEDs,1,5,12,5,12,planning assumption; NOT a supplier quote
+24 panel potentiometers,24,1.5,3.5,36.0,84.0,planning assumption; NOT a supplier quote
+2 encoders,2,1.5,4,3.0,8,planning assumption; NOT a supplier quote
+8 buttons,8,0.2,0.8,1.6,6.4,planning assumption; NOT a supplier quote
+TFT module,1,12,23,12,23,planning assumption; NOT a supplier quote
+Connectors / RCA / CV / ribbon / sockets,1,10,23,10,23,planning assumption; NOT a supplier quote
+Two four-layer PCBs allocated to one prototype,1,15,35,15,35,planning assumption; NOT a supplier quote
+SMD assembly / setup allocated to one prototype,1,35,90,35,90,planning assumption; NOT a supplier quote

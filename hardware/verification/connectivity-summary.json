@@ -1,0 +1,25 @@
+{
+  "core": {
+    "parts": 100,
+    "unique_numbered_pads": 333,
+    "nets": 70,
+    "schematic_to_manifest": "PASS",
+    "pcb_to_manifest": "PASS",
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "erc_violations": 0,
+    "pcb_sha256": "cc46f869a443e8b8055909914f4f7ed61a279365598966bc23daef08303b884e"
+  },
+  "panel": {
+    "parts": 84,
+    "unique_numbered_pads": 345,
+    "nets": 70,
+    "schematic_to_manifest": "PASS",
+    "pcb_to_manifest": "PASS",
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "erc_violations": 0,
+    "pcb_sha256": "004c29edec963824c9784cb0a37470244d674fb0e24ceaee85a565c1520b205a"
+  },
+  "scope": "Connectivity/ERC/DRC only; not semiconductor pinout certification, physical validation, SI or power integrity."
+}

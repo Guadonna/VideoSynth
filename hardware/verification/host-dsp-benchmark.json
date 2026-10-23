@@ -1,0 +1,10 @@
+{
+  "host_native_tests": "PASS",
+  "stress_frames": 20,
+  "average_render_ms": 41.7786,
+  "checksum": 2425691066,
+  "scope": "host CPU, not ESP32-P4",
+  "host_platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+  "capture_note": "Isolated follow-up after unit/browser tests; no MCU benchmark"
+}

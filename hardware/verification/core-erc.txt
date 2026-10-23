@@ -1,0 +1,17 @@
+ERC report (2026-10-23T14:10:26+0000, Encoding UTF8)
+
+***** Sheet /
+
+***** Sheet /Power 1/
+
+***** Sheet /Module and panel interface 1/
+
+***** Sheet /Video DAC and clock 1/
+
+***** Sheet /Video DAC and clock 2/
+
+***** Sheet /CV protection and control ADC 1/
+
+***** Sheet /CV protection and control ADC 2/
+
+ ** ERC messages: 0  Errors 0  Warnings 0

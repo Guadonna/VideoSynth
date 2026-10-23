@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="213.06mm" height="128.5mm" viewBox="0 0 213.06 128.5">
+<rect x=".1" y=".1" width="212.86" height="128.3" rx="1" fill="#e5e3d7" stroke="#333" stroke-width=".2"/>
+<g font-family="monospace" text-anchor="middle" fill="#263032">
+<text x="106.53" y="8" font-size="4">VIDEOSYNTH R1 · 42 HP</text>
+<text x="106.53" y="122" font-size="2.1">PROVISIONAL · CHECK ACTUAL PARTS / HEIGHTS BEFORE CUTTING</text>
+<rect x="4.0" y="1.4" width="7" height="3.2" rx="1.6" fill="none" stroke="#aa4433" stroke-width=".25"/>
+<rect x="4.0" y="123.9" width="7" height="3.2" rx="1.6" fill="none" stroke="#aa4433" stroke-width=".25"/>
+<rect x="202.12" y="1.4" width="7" height="3.2" rx="1.6" fill="none" stroke="#aa4433" stroke-width=".25"/>
+<rect x="202.12" y="123.9" width="7" height="3.2" rx="1.6" fill="none" stroke="#aa4433" stroke-width=".25"/>
+<circle cx="14.54" cy="26.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="14.54" y="20.849999999999998" font-size="1.9">H1 FREQ</text>
+<circle cx="14.54" cy="46.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="14.54" y="40.85" font-size="1.9">H1 FINE</text>
+<circle cx="14.54" cy="66.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="14.54" y="60.85" font-size="1.9">H1 PHASE</text>
+<circle cx="14.54" cy="86.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="14.54" y="80.85000000000001" font-size="1.9">H1 MORPH</text>
+<circle cx="36.54" cy="26.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="36.54" y="20.849999999999998" font-size="1.9">H2 FREQ</text>
+<circle cx="36.54" cy="46.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="36.54" y="40.85" font-size="1.9">H2 FINE</text>
+<circle cx="36.54" cy="66.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="36.54" y="60.85" font-size="1.9">H2 PHASE</text>
+<circle cx="36.54" cy="86.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="36.54" y="80.85000000000001" font-size="1.9">H2 MORPH</text>
+<circle cx="58.54" cy="26.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="58.54" y="20.849999999999998" font-size="1.9">H3 FREQ</text>
+<circle cx="58.54" cy="46.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="58.54" y="40.85" font-size="1.9">H3 FINE</text>
+<circle cx="58.54" cy="66.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="58.54" y="60.85" font-size="1.9">H3 PHASE</text>
+<circle cx="58.54" cy="86.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="58.54" y="80.85000000000001" font-size="1.9">H3 MORPH</text>
+<circle cx="80.53999999999999" cy="26.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="80.53999999999999" y="20.849999999999998" font-size="1.9">V1 FREQ</text>
+<circle cx="80.53999999999999" cy="46.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="80.53999999999999" y="40.85" font-size="1.9">V1 FINE</text>
+<circle cx="80.53999999999999" cy="66.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="80.53999999999999" y="60.85" font-size="1.9">V1 PHASE</text>
+<circle cx="80.53999999999999" cy="86.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="80.53999999999999" y="80.85000000000001" font-size="1.9">V1 MORPH</text>
+<circle cx="102.53999999999999" cy="26.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="102.53999999999999" y="20.849999999999998" font-size="1.9">V2 FREQ</text>
+<circle cx="102.53999999999999" cy="46.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="102.53999999999999" y="40.85" font-size="1.9">V2 FINE</text>
+<circle cx="102.53999999999999" cy="66.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="102.53999999999999" y="60.85" font-size="1.9">V2 PHASE</text>
+<circle cx="102.53999999999999" cy="86.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="102.53999999999999" y="80.85000000000001" font-size="1.9">V2 MORPH</text>
+<circle cx="124.53999999999999" cy="26.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="124.53999999999999" y="20.849999999999998" font-size="1.9">V3 FREQ</text>
+<circle cx="124.53999999999999" cy="46.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="124.53999999999999" y="40.85" font-size="1.9">V3 FINE</text>
+<circle cx="124.53999999999999" cy="66.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="124.53999999999999" y="60.85" font-size="1.9">V3 PHASE</text>
+<circle cx="124.53999999999999" cy="86.25" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="124.53999999999999" y="80.85000000000001" font-size="1.9">V3 MORPH</text>
+<circle cx="14.54" cy="104.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="14.54" y="100.45" font-size="1.9">OSC1</text>
+<circle cx="36.54" cy="104.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="36.54" y="100.45" font-size="1.9">OSC2</text>
+<circle cx="58.54" cy="104.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="58.54" y="100.45" font-size="1.9">OSC3</text>
+<circle cx="80.53999999999999" cy="104.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="80.53999999999999" y="100.45" font-size="1.9">OSC4</text>
+<circle cx="102.53999999999999" cy="104.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="102.53999999999999" y="100.45" font-size="1.9">OSC5</text>
+<circle cx="124.53999999999999" cy="104.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="124.53999999999999" y="100.45" font-size="1.9">OSC6</text>
+<circle cx="21.54" cy="104.25" r="1.0" fill="none" stroke="#333" stroke-width=".25"/>
+<circle cx="43.54" cy="104.25" r="1.0" fill="none" stroke="#333" stroke-width=".25"/>
+<circle cx="65.53999999999999" cy="104.25" r="1.0" fill="none" stroke="#333" stroke-width=".25"/>
+<circle cx="87.53999999999999" cy="104.25" r="1.0" fill="none" stroke="#333" stroke-width=".25"/>
+<circle cx="109.53999999999999" cy="104.25" r="1.0" fill="none" stroke="#333" stroke-width=".25"/>
+<circle cx="131.54" cy="104.25" r="1.0" fill="none" stroke="#333" stroke-width=".25"/>
+<circle cx="165.04" cy="74.75" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="165.04" y="69.35000000000001" font-size="1.9">ENC X</text>
+<circle cx="193.04" cy="74.75" r="3.6" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="193.04" y="69.35000000000001" font-size="1.9">ENC Y</text>
+<circle cx="158.54" cy="92.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="158.54" y="88.45" font-size="1.9">MODE</text>
+<circle cx="186.54" cy="92.25" r="2.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="186.54" y="88.45" font-size="1.9">SLOT</text>
+<circle cx="155.54" cy="106.73" r="3.2" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="155.54" y="101.73" font-size="1.9">CV1</text>
+<circle cx="179.54" cy="106.73" r="3.2" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="179.54" y="101.73" font-size="1.9">CV2</text>
+<circle cx="201.54" cy="106.73" r="4.0" fill="none" stroke="#333" stroke-width=".25"/>
+<text x="201.54" y="100.93" font-size="1.9">OUT</text>
+<rect x="147" y="23" width="50.5" height="38.5" fill="#263638" stroke="#aa4433" stroke-width=".3" stroke-dasharray="1 1"/>
+<text x="172.25" y="42" font-size="3" fill="#b8d3cf">TFT 320 × 240</text>
+<text x="172.25" y="47" font-size="1.7" fill="#b8d3cf">WINDOW TO BE CONFIRMED</text>
+</g></svg>

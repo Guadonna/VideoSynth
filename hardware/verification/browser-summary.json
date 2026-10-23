@@ -1,0 +1,17 @@
+{
+  "passed": 10,
+  "checks": [
+    "browser loads WASM, renders native frame and resolves schematic PDFs",
+    "37th route is rejected in UI",
+    "mix button leaves modulation intact",
+    "MODE changes LCD view; SLOT disabled in preview",
+    "black preset renders black pixels",
+    "invalid preset is rejected atomically",
+    "preset export downloads JSON",
+    "in-app self-test: 7 passed",
+    "mobile viewport has no horizontal page overflow",
+    "standalone HTML renders with zero external resource requests"
+  ],
+  "pageErrors": [],
+  "scope": "Chromium headless on host; not hardware timing or electrical validation"
+}

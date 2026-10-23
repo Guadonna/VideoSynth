@@ -1,0 +1,24 @@
+VideoSynth R1 CV1 powered-on small-signal / DC model
+* Values mirror core CV1 network. Ideal infinite-bandwidth opamp.
+* No model for OPA2197 overload, BAT54S leakage, TMUX power-off or ADC sampling.
+VCC ref 0 3.3
+VCV input 0 DC 0 AC 1
+Rbias1 ref bias 12.4k
+Rbias2 bias 0 10k
+Cbias bias 0 1u
+Rin input inv 100k
+Rfeedback output inv 12k
+Cfeedback output inv 47n
+Eop output 0 bias inv 1000000
+Rfilter output adc 4.7k
+Cfilter adc 0 100n
+Rload adc 0 100k
+.control
+set wr_vecnames
+set wr_singlescale
+dc VCV -10 10 0.1
+wrdata hardware/verification/cv-dc.txt v(adc)
+ac dec 50 1 10000
+wrdata hardware/verification/cv-ac.txt v(adc)
+.endc
+.end
