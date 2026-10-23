@@ -6,6 +6,7 @@ CPU costs, utilisation allowance, power and efficiency are explicit assumptions.
 from pathlib import Path
 import csv
 import json
+import math
 from itertools import product
 
 OUT = Path(__file__).resolve().parent
@@ -21,7 +22,7 @@ CPUS = {"RP2350_150_1core": 150e6, "RP2350_150_2cores_upper_bound": 300e6,
 
 def csv_write(name, rows):
     with (OUT / name).open("w", newline="", encoding="utf-8-sig") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0]))
+        w = csv.DictWriter(f, fieldnames=list(rows[0]), lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -75,6 +76,8 @@ for r in (4700, 22000, 47000):
     sensed = source * pull / (pull + n*r)
     electrical.append(dict(series_ohm=r, group_contacts=n, pulldown_ohm=pull,
                            ideal_sensed_high_V=sensed,
+                           MCP23S17_VIH_min_at_3V3=0.8*3.3,
+                           ideal_margin_to_MCP23S17_VIH_V=sensed-0.8*3.3,
                            fault_current_to_zero_mA=15/r*1000,
                            fault_resistor_mW=15*15/r*1000,
                            current_44_clamped_contacts_mA=44*15/r*1000,
@@ -88,6 +91,22 @@ for watts in (3.0, 4.5, 6.0):
                       eurorack_plus12_current_A=watts/(12*0.90),
                       converter_loss_W=watts*(1/0.90-1)))
 csv_write("power-budget.csv", power)
+
+# Ideal filter comparison: THS7314 is modified Butterworth, not exactly this model.
+filters = []
+for sample_mhz in (13.5, 27.0):
+    for signal_mhz in (3.0, 5.0):
+        image_mhz = sample_mhz - signal_mhz
+        filters.append(dict(DAC_sample_MHz=sample_mhz, signal_MHz=signal_mhz,
+                            first_image_MHz=image_mhz,
+                            assumed_fifth_order_corner_MHz=8.5,
+                            ideal_filter_image_attenuation_dB=10*math.log10(1+(image_mhz/8.5)**10),
+                            caveat="Ideal filter only; 27 MSPS requires interpolation, not sample repetition"))
+csv_write("video-filter-sensitivity.csv", filters)
+
+with (OUT / "components-preliminary.csv").open(encoding="utf-8-sig", newline="") as f:
+    bom = list(csv.DictReader(f))
+bom_totals = {side: sum(float(r[f"line_USD_{side}"]) for r in bom) for side in ("low", "high")}
 summary = {
     "nature": "Arithmetic and ideal connectivity models only; no physical measurements",
     "common_raster_samples_s": 864*625*25,
@@ -99,12 +118,20 @@ summary = {
     "SPI_40MHz_320x240_RGB565_20fps_occupancy": 320*240*2*20/(40e6/8),
     "SPI_40MHz_240x240_RGB565_15fps_occupancy": 240*240*2*15/(40e6/8),
     "link_16bit_20MHz_MB_s": 16*20e6/8/1e6,
-    "GPIO_RP_video_link_budget": 24+2+16+2+1,
+    "GPIO_RP_R2R_video_link_budget": 24+2+16+2+1,
+    "GPIO_RP_clocked_DAC_video_link_budget": 24+2+16+2+1+1,
     "parallel_108_edges_360x288_50_MAC_s": 108*360*288*50,
     "CV36_edges_50ksps_MAC_s": 36*50000,
     "topology_unintended_route_demonstrated": True,
     "isolated_mixer_pair_states_verified": 512,
     "fault_clamps": "15/R assumes clamping near 0 V; not component qualification",
+    "biased_scan_ideal_high_V": 0.3+(2.7-0.3)*2.2e6/(2.2e6+44*47000),
+    "biased_scan_ideal_margin_to_0V9_threshold_V": 0.3+(2.7-0.3)*2.2e6/(2.2e6+44*47000)-0.9,
+    "MCP23S17_guaranteed_VIH_3V3": 0.8*3.3,
+    "raster_27MSPS_padded32_MB_s": 27e6*4/1e6,
+    "16_line_27MSPS_padded32_bytes": 16*1728*4,
+    "PAL_colour_line_frequency_table_tolerance_ppm": 0.00002*1e4,
+    "preliminary_BOM_totals_USD": bom_totals,
 }
 (OUT / "calculation-summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 print(json.dumps(summary, indent=2))

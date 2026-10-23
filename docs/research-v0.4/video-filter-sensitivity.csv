@@ -1,0 +1,5 @@
+﻿DAC_sample_MHz,signal_MHz,first_image_MHz,assumed_fifth_order_corner_MHz,ideal_filter_image_attenuation_dB,caveat
+13.5,3.0,10.5,8.5,9.672565791137492,"Ideal filter only; 27 MSPS requires interpolation, not sample repetition"
+13.5,5.0,8.5,8.5,3.010299956639812,"Ideal filter only; 27 MSPS requires interpolation, not sample repetition"
+27.0,3.0,24.0,8.5,45.07936645080505,"Ideal filter only; 27 MSPS requires interpolation, not sample repetition"
+27.0,5.0,22.0,8.5,41.30069741797225,"Ideal filter only; 27 MSPS requires interpolation, not sample repetition"

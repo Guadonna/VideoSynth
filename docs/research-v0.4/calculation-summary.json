@@ -9,10 +9,21 @@
   "SPI_40MHz_320x240_RGB565_20fps_occupancy": 0.6144,
   "SPI_40MHz_240x240_RGB565_15fps_occupancy": 0.3456,
   "link_16bit_20MHz_MB_s": 40.0,
-  "GPIO_RP_video_link_budget": 45,
+  "GPIO_RP_R2R_video_link_budget": 45,
+  "GPIO_RP_clocked_DAC_video_link_budget": 46,
   "parallel_108_edges_360x288_50_MAC_s": 559872000,
   "CV36_edges_50ksps_MAC_s": 1800000,
   "topology_unintended_route_demonstrated": true,
   "isolated_mixer_pair_states_verified": 512,
-  "fault_clamps": "15/R assumes clamping near 0 V; not component qualification"
+  "fault_clamps": "15/R assumes clamping near 0 V; not component qualification",
+  "biased_scan_ideal_high_V": 1.537113402061856,
+  "biased_scan_ideal_margin_to_0V9_threshold_V": 0.637113402061856,
+  "MCP23S17_guaranteed_VIH_3V3": 2.64,
+  "raster_27MSPS_padded32_MB_s": 108.0,
+  "16_line_27MSPS_padded32_bytes": 110592,
+  "PAL_colour_line_frequency_table_tolerance_ppm": 0.2,
+  "preliminary_BOM_totals_USD": {
+    "low": 247.26,
+    "high": 416.68
+  }
 }
