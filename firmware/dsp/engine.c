@@ -86,7 +86,7 @@ void reset_state(void){
 int render_frame(double time_seconds){
  if(!(time_seconds>=0&&time_seconds<1e8))return -1;
  int nmix=0;for(int i=0;i<6;i++)nmix+=osc[i].mixed;
- float base[6],base_dt[6];float inv_mix=nmix?1.f/nmix:0;
+ float base[6],base_dt[6];
  for(int i=0;i<6;i++){base[i]=clampf(osc[i].frequency+osc[i].fine,.01f,64.f);base_dt[i]=base[i]/(i<3?width:height);}
  for(int field=0;field<2;field++){
   float prev[8]={0};int64_t last_cv_tick=-1;
@@ -100,7 +100,9 @@ int render_frame(double time_seconds){
     double seconds=time_seconds+(half_start+(y-field)*480./height)*858./27000000.+(244.+x*1440./width)/27000000.;
     int64_t tick=(int64_t)(seconds*4000.);
     if(tick!=last_cv_tick){double sampled=tick/4000.;prev[6]=cv_source(0,sampled);prev[7]=cv_source(1,sampled);last_cv_tick=tick;}
-    float out[6],mix=0;
+    /* Bipolar product: +1 is identity, -1 inverts, 0 is mid-grey.
+     * With no selected OSC, the video output is explicitly black. */
+    float out[6],mix=1;
     for(int i=0;i<6;i++){
      float sums[3]={0};for(int m=0;m<3;m++){
       int d=i*3+m;for(int k=0;k<src_count[d];k++)sums[m]+=prev[active_src[d][k]];
@@ -108,12 +110,16 @@ int render_frame(double time_seconds){
      }
      float dt=base_dt[i]*clampf(1+.25f*sums[0],0,2);
      float phase=i<3?hp[i]:vphase[i-3][x];
-     out[i]=clampf(wave(phase+osc[i].phase+.125f*sums[2],osc[i].morph,dt)*clampf(1+.25f*sums[1],0,2),-1,1);
-     if(osc[i].mixed)mix+=(out[i]+1)*.5f;
+     /* Ring AM has no DC bias. With several AM routes their signed
+      * controls add on one bus, limited to unity; no AM routes => bypass.
+      * Feedback reads post-AM outputs, so an AM-only loop can stay at 0. */
+     float am=src_count[i*3+1]?clampf(sums[1],-1,1):1;
+     out[i]=clampf(wave(phase+osc[i].phase+.125f*sums[2],osc[i].morph,dt)*am,-1,1);
+     if(osc[i].mixed)mix*=out[i];
      if(i<3)hp[i]=fract(hp[i]+dt);else vphase[i-3][x]=fract(vphase[i-3][x]+2*dt);
     }
     for(int i=0;i<6;i++)prev[i]=out[i];
-    int k=y*width+x;uint8_t val=nmix?(uint8_t)(clampf(mix*inv_mix,0,1)*255+.5f):0;luma[k]=val;
+    int k=y*width+x;uint8_t val=nmix?(uint8_t)(clampf((mix+1)*.5f,0,1)*255+.5f):0;luma[k]=val;
     pixels[k*4]=pixels[k*4+1]=pixels[k*4+2]=val;pixels[k*4+3]=255;
    }
   }

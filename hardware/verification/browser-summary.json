@@ -1,5 +1,5 @@
 {
-  "passed": 10,
+  "passed": 13,
   "checks": [
     "browser loads WASM, renders native frame and resolves schematic PDFs",
     "37th route is rejected in UI",
@@ -8,7 +8,10 @@
     "black preset renders black pixels",
     "invalid preset is rejected atomically",
     "preset export downloads JSON",
-    "in-app self-test: 7 passed",
+    "mix controls multiply bipolar OSC, remove one factor and invert with phase",
+    "hidden V1 ring-AM inverts H1; disabling AM restores the unmodulated carrier",
+    "CV through the AM slot preserves, inverts and suppresses the carrier",
+    "in-app self-test: 10 passed",
     "mobile viewport has no horizontal page overflow",
     "standalone HTML renders with zero external resource requests"
   ],

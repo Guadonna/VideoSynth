@@ -124,6 +124,12 @@ async function selfTest(){
   test('SLOT не изменяет матрицу в preview',()=>{const s=initialState();s.screen='preview';slotButton(s);return countRoutes(s)===0;});
   test('OSC-кнопка не удаляет связи',()=>{const s=initialState();s.matrix[0][3]=true;toggleOsc(s,0);return !s.osc[0].mixed&&s.matrix[0][3];});
   test('Два поля по 262,5 строки',()=>VIDEO.fieldSamples===1716*262.5&&VIDEO.frameSamples===2*VIDEO.fieldSamples);
+  api.reset_state();api.set_size(64,48);for(let i=0;i<6;i++)api.set_osc(i,2,0,0,0,i===0||i===1?1:0);
+  test('Микс перемножает: (−1) × (−1) = +1',()=>{api.render_frame(0);return new Uint8Array(api.memory.buffer,api.luma_ptr(),3072)[24]===255;});
+  api.set_osc(1,2,0,0,0,0);api.set_route(6,1,1);api.set_cv(0,0,-10,1,5);
+  test('AM с отрицательным CV инвертирует сигнал',()=>{api.render_frame(0);const p=new Uint8Array(api.memory.buffer,api.luma_ptr(),3072);return p[8]<=1&&p[24]>=254;});
+  api.set_cv(0,0,0,1,5);
+  test('AM с нулевым CV даёт средний серый',()=>{api.render_frame(0);return new Uint8Array(api.memory.buffer,api.luma_ptr(),3072).every(v=>v===127||v===128);});
  }catch(e){results.push(['Загрузка DSP: '+e.message,false]);}
  $('#test-results').replaceChildren(...results.map(([name,ok])=>{const div=document.createElement('div');div.className='test-row';const text=document.createElement('span');text.textContent=name;const badge=document.createElement('span');badge.className=ok?'pass':'fail';badge.textContent=ok?'✓ PASS':'✕ FAIL';div.append(text,badge);return div;}));$('#self-test').disabled=false;
 }

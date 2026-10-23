@@ -13,6 +13,7 @@
 | Пакет R1 с исходниками и PDF | [VideoSynth-R1-prototype.zip](../../dist/VideoSynth-R1-prototype.zip) |
 | Электроника, питание и сборка | [hardware.md](hardware.md) |
 | Правила синтеза и ограничения модели | [dsp.md](dsp.md) |
+| Изменение AM и микса 0.6.2 | [modulation-fixes.md](modulation-fixes.md) |
 | Проверки и доказательства | [validation.md](validation.md) |
 | Порядок испытаний | [bringup.md](bringup.md) |
 | Компоненты | [BOM](../../hardware/bom-r1.csv), [внешние узлы](../../hardware/external-assemblies.csv), [смета](../../hardware/cost-estimate-usd.csv) |

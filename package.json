@@ -1,6 +1,6 @@
 {
   "name": "videosynth-r1",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "private": true,
   "type": "module",
   "description": "VideoSynth R1 hardware prototype and portable DSP emulator",

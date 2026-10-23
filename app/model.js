@@ -35,15 +35,26 @@ export function validateState(input){
 export function preset(name){
  const s=initialState();
  if(name==='weave'){
-  s.osc[0].frequency=11;s.osc[0].morph=2.35;s.osc[3].frequency=9;s.osc[3].morph=1;
-  s.osc[1].frequency=3;s.osc[4].frequency=4;
-  for(const [y,x] of [[1,2],[4,11],[3,1],[0,10]])s.matrix[y][x]=true;
+  s.osc[0].frequency=11;s.osc[0].morph=3;s.osc[3].frequency=9;s.osc[3].morph=1;
+  s.osc[1].frequency=3;s.osc[4].frequency=4;s.osc[1].morph=s.osc[4].morph=3;
+  // Independent AM sources keep this demo out of a zero-start AM loop.
+  for(const [y,x] of [[1,2],[4,11],[4,1],[1,10]])s.matrix[y][x]=true;
+ }else if(name==='am'){
+  s.osc.forEach((o,i)=>{o.mixed=i===0;o.frequency=i===3?2:8;});
+  s.matrix[3][1]=true;s.cursor={x:1,y:3};
+ }else if(name==='multiply'){
+  s.osc[0].frequency=8;s.osc[3].frequency=6;
  }else if(name==='feedback'){
   s.osc.forEach((o,i)=>{o.mixed=i===0||i===3;o.frequency=[12,5,8,10,4,6][i];o.morph=.5;});
   for(const [y,x] of [[0,2],[3,0],[0,11],[3,9],[1,2],[4,11]])s.matrix[y][x]=true;
  }else if(name==='stress'){
-  s.osc.forEach(o=>{o.mixed=true;o.morph=1.2;});
-  for(let y=0;y<6;y++)for(let target=0;target<6;target++)s.matrix[y][target*3+(y+target)%3]=true;
+  s.osc.forEach(o=>{o.mixed=true;o.morph=3;});
+  // V3 supplies every AM bus, but has no AM input of its own. Closed
+  // ring-AM loops started at zero otherwise produce a flat grey image.
+  for(let y=0;y<6;y++)for(let target=0;target<6;target++){
+   const mode=target===5?(y%2?2:0):y===5?1:(y+target)%3;
+   s.matrix[y][target*3+mode]=true;
+  }
  }else if(name==='black')s.osc.forEach(o=>o.mixed=false);
  return s;
 }

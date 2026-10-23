@@ -2,159 +2,201 @@ TAP version 13
 # Subtest: runtime accepts state and pause before WASM finishes loading
 ok 1 - runtime accepts state and pause before WASM finishes loading
   ---
-  duration_ms: 163.149908
+  duration_ms: 177.304671
   type: 'test'
   ...
 # Subtest: a synchronous Worker rejection falls back and preserves paused controls
 ok 2 - a synchronous Worker rejection falls back and preserves paused controls
   ---
-  duration_ms: 141.901118
+  duration_ms: 202.830717
   type: 'test'
   ...
 # Subtest: an error Event without message recovers; stale Worker events are ignored
 ok 3 - an error Event without message recovers; stale Worker events are ignored
   ---
-  duration_ms: 69.36633
+  duration_ms: 72.772285
   type: 'test'
   ...
 # Subtest: a Worker that never becomes ready times out into the same WASM renderer
 ok 4 - a Worker that never becomes ready times out into the same WASM renderer
   ---
-  duration_ms: 382.006159
+  duration_ms: 438.853063
   type: 'test'
   ...
 # Subtest: a missing WASM asset produces one actionable error, not undefined
 ok 5 - a missing WASM asset produces one actionable error, not undefined
   ---
-  duration_ms: 6.153495
+  duration_ms: 1.163876
   type: 'test'
   ...
 # Subtest: terminating during WASM loading cannot revive the renderer
 ok 6 - terminating during WASM loading cannot revive the renderer
   ---
-  duration_ms: 1.840137
+  duration_ms: 0.921473
   type: 'test'
   ...
 # Subtest: native 720×480 is computed, with black only when mix is empty
 ok 7 - native 720×480 is computed, with black only when mix is empty
   ---
-  duration_ms: 266.227815
+  duration_ms: 317.507931
   type: 'test'
   ...
 # Subtest: unmodulated H follows X, V follows Y across both interlaced fields
 ok 8 - unmodulated H follows X, V follows Y across both interlaced fields
   ---
-  duration_ms: 7.77764
+  duration_ms: 8.226609
   type: 'test'
   ...
 # Subtest: an oscillator excluded from mix remains an effective modulator
 ok 9 - an oscillator excluded from mix remains an effective modulator
   ---
-  duration_ms: 7.507892
+  duration_ms: 6.250408
   type: 'test'
   ...
 # Subtest: cyclic cross-modulation, self-PM and all 36 routes are deterministic
 ok 10 - cyclic cross-modulation, self-PM and all 36 routes are deterministic
   ---
-  duration_ms: 235.669634
+  duration_ms: 247.487208
   type: 'test'
   ...
 # Subtest: DC CV changes render through the matrix; LFO preserves deterministic simulated time
 ok 11 - DC CV changes render through the matrix; LFO preserves deterministic simulated time
   ---
-  duration_ms: 3.485252
+  duration_ms: 5.973278
   type: 'test'
   ...
 # Subtest: invalid inputs, including NaN, are rejected without corrupting state
 ok 12 - invalid inputs, including NaN, are rejected without corrupting state
   ---
-  duration_ms: 67.513585
+  duration_ms: 235.63279
+  type: 'test'
+  ...
+# Subtest: mix multiplies bipolar signals: identical waves square, opposite waves invert the product
+ok 13 - mix multiplies bipolar signals: identical waves square, opposite waves invert the product
+  ---
+  duration_ms: 4.901799
+  type: 'test'
+  ...
+# Subtest: all six selected OSC form one product; disabling a factor leaves the product of the rest
+ok 14 - all six selected OSC form one product; disabling a factor leaves the product of the rest
+  ---
+  duration_ms: 9.593108
+  type: 'test'
+  ...
+# Subtest: ring AM: +10 V preserves, -10 V inverts, 0 V removes the carrier; disabling restores it
+ok 15 - ring AM: +10 V preserves, -10 V inverts, 0 V removes the carrier; disabling restores it
+  ---
+  duration_ms: 6.445795
+  type: 'test'
+  ...
+# Subtest: invisible OSC ring-modulates with previous-active-pixel latency, in both fields
+ok 16 - invisible OSC ring-modulates with previous-active-pixel latency, in both fields
+  ---
+  duration_ms: 7.117889
+  type: 'test'
+  ...
+# Subtest: several AM controls add on a bipolar bus, cancel and clip without a carrier bias
+ok 17 - several AM controls add on a bipolar bus, cancel and clip without a carrier bias
+  ---
+  duration_ms: 6.556306
+  type: 'test'
+  ...
+# Subtest: a closed AM-only feedback loop with zero history stays at zero; bypass breaks the loop
+ok 18 - a closed AM-only feedback loop with zero history stays at zero; bypass breaks the loop
+  ---
+  duration_ms: 6.862957
+  type: 'test'
+  ...
+# Subtest: AM and product demo presets and the revised weave produce non-flat images
+ok 19 - AM and product demo presets and the revised weave produce non-flat images
+  ---
+  duration_ms: 325.499781
   type: 'test'
   ...
 # Subtest: 144 addressable slots, 36 enabled including CV; 37th rejected atomically
-ok 13 - 144 addressable slots, 36 enabled including CV; 37th rejected atomically
+ok 20 - 144 addressable slots, 36 enabled including CV; 37th rejected atomically
   ---
-  duration_ms: 4.834588
+  duration_ms: 4.261048
   type: 'test'
   ...
 # Subtest: oscillator buttons latch mix only and preserve modulation graph
-ok 14 - oscillator buttons latch mix only and preserve modulation graph
+ok 21 - oscillator buttons latch mix only and preserve modulation graph
   ---
-  duration_ms: 0.301934
+  duration_ms: 0.214304
   type: 'test'
   ...
 # Subtest: MODE preserves parameters/routes; SLOT cannot change hidden matrix
-ok 15 - MODE preserves parameters/routes; SLOT cannot change hidden matrix
+ok 22 - MODE preserves parameters/routes; SLOT cannot change hidden matrix
   ---
-  duration_ms: 0.582868
+  duration_ms: 0.330146
   type: 'test'
   ...
 # Subtest: two independent encoder axes wrap at 18 and 8
-ok 16 - two independent encoder axes wrap at 18 and 8
+ok 23 - two independent encoder axes wrap at 18 and 8
   ---
-  duration_ms: 0.281857
+  duration_ms: 0.284635
   type: 'test'
   ...
 # Subtest: import validates every numeric parameter and never exceeds DSP limits
-ok 17 - import validates every numeric parameter and never exceeds DSP limits
+ok 24 - import validates every numeric parameter and never exceeds DSP limits
   ---
-  duration_ms: 3.105749
+  duration_ms: 3.911802
   type: 'test'
   ...
 # Subtest: CV DC model includes inverted gain, output load and ADC quantization
-ok 18 - CV DC model includes inverted gain, output load and ADC quantization
+ok 25 - CV DC model includes inverted gain, output load and ADC quantization
   ---
-  duration_ms: 0.366142
+  duration_ms: 0.362419
   type: 'test'
   ...
 # Subtest: portable C core builds natively and passes native assertions + stress render
-ok 19 - portable C core builds natively and passes native assertions + stress render
+ok 26 - portable C core builds natively and passes native assertions + stress render
   ---
-  duration_ms: 1831.109518
+  duration_ms: 4213.026475
   type: 'test'
   ...
 # Subtest: exact 525/59.94 raster lengths, no progressive/30.000 substitution
-ok 20 - exact 525/59.94 raster lengths, no progressive/30.000 substitution
+ok 27 - exact 525/59.94 raster lengths, no progressive/30.000 substitution
   ---
-  duration_ms: 1.475263
+  duration_ms: 0.866708
   type: 'test'
   ...
 # Subtest: both fields have 6 pre-equalizing, 6 broad and 6 post-equalizing pulses
-ok 21 - both fields have 6 pre-equalizing, 6 broad and 6 post-equalizing pulses
+ok 28 - both fields have 6 pre-equalizing, 6 broad and 6 post-equalizing pulses
   ---
-  duration_ms: 41.977949
+  duration_ms: 19.901547
   type: 'test'
   ...
 # Subtest: black output retains H sync; empty luma never enters sync level in active picture
-ok 22 - black output retains H sync; empty luma never enters sync level in active picture
+ok 29 - black output retains H sync; empty luma never enters sync level in active picture
   ---
-  duration_ms: 10.87769
+  duration_ms: 8.908057
   type: 'test'
   ...
 # Subtest: field parity sends even and odd rows to distinct 262.5-line fields
-ok 23 - field parity sends even and odd rows to distinct 262.5-line fields
+ok 30 - field parity sends even and odd rows to distinct 262.5-line fields
   ---
-  duration_ms: 3.980188
+  duration_ms: 4.496141
   type: 'test'
   ...
 # Subtest: 2x interpolation and DAC loading have explicit numerical models
-ok 24 - 2x interpolation and DAC loading have explicit numerical models
+ok 31 - 2x interpolation and DAC loading have explicit numerical models
   ---
-  duration_ms: 6.737725
+  duration_ms: 11.986076
   type: 'test'
   ...
 # Subtest: non-native frames cannot be labelled as native composite
-ok 25 - non-native frames cannot be labelled as native composite
+ok 32 - non-native frames cannot be labelled as native composite
   ---
-  duration_ms: 0.486349
+  duration_ms: 0.68954
   type: 'test'
   ...
-1..25
-# tests 25
+1..32
+# tests 32
 # suites 0
-# pass 25
+# pass 32
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 2026.820608
+# duration_ms 4465.518166

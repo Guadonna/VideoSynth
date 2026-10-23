@@ -1,10 +1,9 @@
 {
   "host_native_tests": "PASS",
+  "dsp_version": "0.6.2",
+  "scenario": "36 routes, 6 square OSC in product, independent V3 AM source",
   "stress_frames": 20,
-  "average_render_ms": 41.7786,
-  "checksum": 2425691066,
-  "scope": "host CPU, not ESP32-P4",
-  "host_platform": "Linux-6.18.55-x86_64-with-glibc2.41",
-  "compiler": "cc (Debian 14.2.0-19) 14.2.0",
-  "capture_note": "Isolated follow-up after unit/browser tests; no MCU benchmark"
+  "average_render_ms": 79.1224,
+  "checksum": 2284877339,
+  "scope": "host CPU, not ESP32-P4"
 }
