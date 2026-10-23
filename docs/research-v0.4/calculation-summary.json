@@ -1,0 +1,18 @@
+{
+  "nature": "Arithmetic and ideal connectivity models only; no physical measurements",
+  "common_raster_samples_s": 13500000,
+  "raster_packed24_MB_s": 40.5,
+  "raster_padded32_MB_s": 54.0,
+  "one_line_padded32_bytes": 3456,
+  "16_line_padded32_bytes": 55296,
+  "raster_field_samples": 270000,
+  "SPI_40MHz_320x240_RGB565_20fps_occupancy": 0.6144,
+  "SPI_40MHz_240x240_RGB565_15fps_occupancy": 0.3456,
+  "link_16bit_20MHz_MB_s": 40.0,
+  "GPIO_RP_video_link_budget": 45,
+  "parallel_108_edges_360x288_50_MAC_s": 559872000,
+  "CV36_edges_50ksps_MAC_s": 1800000,
+  "topology_unintended_route_demonstrated": true,
+  "isolated_mixer_pair_states_verified": 512,
+  "fault_clamps": "15/R assumes clamping near 0 V; not component qualification"
+}
