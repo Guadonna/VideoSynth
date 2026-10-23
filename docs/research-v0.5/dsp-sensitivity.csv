@@ -1,0 +1,6 @@
+﻿assumed_cycles_per_point,required_Mcycles_s,ideal_P4_2core_with_40pct_reserve_max_fps,warning
+24,248.58341658341658,57.870370370370374,"Assumed cost only, not measured, not a prediction"
+40,414.3056943056943,34.72222222222222,"Assumed cost only, not measured, not a prediction"
+60,621.4585414585415,23.14814814814815,"Assumed cost only, not measured, not a prediction"
+100,1035.7642357642358,13.88888888888889,"Assumed cost only, not measured, not a prediction"
+160,1657.2227772227773,8.680555555555555,"Assumed cost only, not measured, not a prediction"

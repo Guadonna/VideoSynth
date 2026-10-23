@@ -1,0 +1,9 @@
+﻿cpu,cycles_per_point,cycles_per_point_with_40pct_reserve,warning
+RP2350_150_one_core,14.482060185185185,8.68923611111111,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+RP2350_150_two_cores_ideal,28.96412037037037,17.37847222222222,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+RP2350_135_two_cores_ideal,26.067708333333332,15.640625,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+ESP32S3_240_two_cores_ideal,46.34259259259259,27.805555555555554,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+ESP32P4_400_one_core,38.61882716049382,23.171296296296294,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+ESP32P4_400_two_cores_ideal,77.23765432098764,46.34259259259259,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+STM32H743_480_one_core,46.34259259259259,27.805555555555554,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"
+RT1176_M7_996_one_core,96.16087962962962,57.696527777777774,"Ideal capacity, not measured; feedback may prevent multicore/SIMD scaling"

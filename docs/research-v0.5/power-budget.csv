@@ -1,0 +1,4 @@
+﻿assumed_load_W,assumed_efficiency,plus12_current_A,conversion_loss_W,note
+2,0.9,0.18518518518518517,0.22222222222222232,All modeled load supplied from +12 V; any -12 V analog load must be budgeted separately
+3.5,0.9,0.32407407407407407,0.38888888888888906,All modeled load supplied from +12 V; any -12 V analog load must be budgeted separately
+5,0.9,0.4629629629629629,0.5555555555555558,All modeled load supplied from +12 V; any -12 V analog load must be budgeted separately

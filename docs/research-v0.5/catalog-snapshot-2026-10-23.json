@@ -1,0 +1,679 @@
+{
+  "date_UTC": "2026-10-23",
+  "endpoint": "https://jlcpcb.com/api/overseas-pcb-order/v1/shoppingCart/smtGood/selectSmtComponentList/v2",
+  "method": "POST, read-only public search",
+  "query_defaults": {
+    "presaleType": "stock",
+    "currentPage": 1,
+    "pageSize": 25,
+    "searchType": 2,
+    "searchSource": "search"
+  },
+  "queries": [
+    {
+      "keyword": "MCP3204",
+      "total": 7,
+      "rows": [
+        {
+          "componentCode": "C636798",
+          "componentModelEn": "MCP3204-BI/P",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 30,
+          "componentSpecificationEn": "PDIP-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 7.199
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 6.1965
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 89,
+              "productPrice": 5.5424
+            },
+            {
+              "startNumber": 90,
+              "endNumber": 91,
+              "productPrice": 5.0305
+            },
+            {
+              "startNumber": 92,
+              "endNumber": 93,
+              "productPrice": 5.0305
+            },
+            {
+              "startNumber": 94,
+              "endNumber": -1,
+              "productPrice": 5.0305
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204_BIP/C636798"
+        },
+        {
+          "componentCode": "C636799",
+          "componentModelEn": "MCP3204-CI/P",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 152,
+          "componentSpecificationEn": "PDIP-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 4.0803
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 3.5112
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 3.0451
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 2.7017
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 2.5447
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 2.4728
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204_CIP/C636799"
+        },
+        {
+          "componentCode": "C32816",
+          "componentModelEn": "MCP3204-CI/SL",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 344,
+          "componentSpecificationEn": "SOIC-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 2.7262
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 2.3321
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 2.0721
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 1.8186
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 1.7041
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 1.6551
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204_CISL/C32816"
+        },
+        {
+          "componentCode": "C107363",
+          "componentModelEn": "MCP3204-BI/SL",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 145,
+          "componentSpecificationEn": "SOIC-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 7.4361
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 6.5612
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 6.0395
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 5.5146
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 5.2709
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 5.1613
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204_BISL/C107363"
+        },
+        {
+          "componentCode": "C637057",
+          "componentModelEn": "MCP3204-CI/ST",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 231,
+          "componentSpecificationEn": "TSSOP-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 5.1417
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 4.4467
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 4.0329
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 3.6142
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 3.4213
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 3.3346
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204_CIST/C637057"
+        },
+        {
+          "componentCode": "C627070",
+          "componentModelEn": "MCP3204T-CI/ST",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 98,
+          "componentSpecificationEn": "TSSOP-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 3.2087
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 2.7262
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 2.44
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 2.1506
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 2.0181
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 1.9576
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204T_CIST/C627070"
+        },
+        {
+          "componentCode": "C2669887",
+          "componentModelEn": "MCP3204T-CI/SL",
+          "componentBrandEn": "Microchip Tech",
+          "stockCount": 294,
+          "componentSpecificationEn": "SOIC-14",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 2.4188
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 2.2209
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 2.0819
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 1.9543
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 1.8971
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 1.8726
+            }
+          ],
+          "urlSuffix": "MicrochipTech-MCP3204T_CISL/C2669887"
+        }
+      ]
+    },
+    {
+      "keyword": "AD9708",
+      "total": 3,
+      "rows": [
+        {
+          "componentCode": "C653732",
+          "componentModelEn": "AD9708ARU",
+          "componentBrandEn": "Analog Devices",
+          "stockCount": 6,
+          "componentSpecificationEn": "TSSOP-28",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 16.2983
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 15.5689
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 14.3048
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 101,
+              "productPrice": 13.2009
+            },
+            {
+              "startNumber": 102,
+              "endNumber": 103,
+              "productPrice": 13.2009
+            },
+            {
+              "startNumber": 104,
+              "endNumber": -1,
+              "productPrice": 13.2009
+            }
+          ],
+          "urlSuffix": "AnalogDevices-AD9708ARU/C653732"
+        },
+        {
+          "componentCode": "C9640",
+          "componentModelEn": "AD9708ARUZ",
+          "componentBrandEn": "Analog Devices",
+          "stockCount": 7,
+          "componentSpecificationEn": "TSSOP-28",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 14.151
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 49,
+              "productPrice": 13.4495
+            },
+            {
+              "startNumber": 50,
+              "endNumber": 99,
+              "productPrice": 12.2932
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 101,
+              "productPrice": 11.2842
+            },
+            {
+              "startNumber": 102,
+              "endNumber": 103,
+              "productPrice": 11.2842
+            },
+            {
+              "startNumber": 104,
+              "endNumber": -1,
+              "productPrice": 11.2842
+            }
+          ],
+          "urlSuffix": "AnalogDevices-AD9708ARUZ/C9640"
+        },
+        {
+          "componentCode": "C653733",
+          "componentModelEn": "AD9708ARUZRL7",
+          "componentBrandEn": "Analog Devices",
+          "stockCount": 2,
+          "componentSpecificationEn": "TSSOP-28",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 14.1985
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 13.5312
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 12.375
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 101,
+              "productPrice": 11.3676
+            },
+            {
+              "startNumber": 102,
+              "endNumber": 103,
+              "productPrice": 11.3676
+            },
+            {
+              "startNumber": 104,
+              "endNumber": -1,
+              "productPrice": 11.3676
+            }
+          ],
+          "urlSuffix": "AnalogDevices-AD9708ARUZRL7/C653733"
+        }
+      ]
+    },
+    {
+      "keyword": "RP2350A",
+      "total": 1,
+      "rows": [
+        {
+          "componentCode": "C42411118",
+          "componentModelEn": "RP2350A",
+          "componentBrandEn": "Raspberry Pi",
+          "stockCount": 5924,
+          "componentSpecificationEn": "QFN-60-EP(7x7)",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 1.2936
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 1.207
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 1.1595
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 1.1301
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 1.1056
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 1.0941
+            }
+          ],
+          "urlSuffix": "RaspberryPi-RP2350A/C42411118"
+        }
+      ]
+    },
+    {
+      "keyword": "OPA2197",
+      "total": 5,
+      "rows": [
+        {
+          "componentCode": "C133553",
+          "componentModelEn": "OPA2197IDGKT",
+          "componentBrandEn": "Texas Instruments",
+          "stockCount": 72,
+          "componentSpecificationEn": "VSSOP-8",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 2.2847
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 2.0165
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 249,
+              "productPrice": 1.7941
+            },
+            {
+              "startNumber": 250,
+              "endNumber": 499,
+              "productPrice": 1.6224
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 1.5455
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 1.5111
+            }
+          ],
+          "urlSuffix": "TexasInstruments-OPA2197IDGKT/C133553"
+        },
+        {
+          "componentCode": "C139363",
+          "componentModelEn": "OPA2197IDR",
+          "componentBrandEn": "Texas Instruments",
+          "stockCount": 13267,
+          "componentSpecificationEn": "SOIC-8",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 1.3133
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 1.1203
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 1.0156
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 0.8962
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 0.8423
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 0.8177
+            }
+          ],
+          "urlSuffix": "TexasInstruments-OPA2197IDR/C139363"
+        },
+        {
+          "componentCode": "C1347222",
+          "componentModelEn": "OPA2197ID",
+          "componentBrandEn": "Texas Instruments",
+          "stockCount": 118,
+          "componentSpecificationEn": "SOIC-8",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 1.588
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 1.3165
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 1.1693
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 1.0009
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 0.9257
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 0.8913
+            }
+          ],
+          "urlSuffix": "TexasInstruments-OPA2197ID/C1347222"
+        },
+        {
+          "componentCode": "C2859819",
+          "componentModelEn": "OPA2197QDGKRQ1",
+          "componentBrandEn": "Texas Instruments",
+          "stockCount": 40,
+          "componentSpecificationEn": "VSSOP-8",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 3.8285
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 3.297
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 2.9797
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 2.6608
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 2.5136
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 2.4466
+            }
+          ],
+          "urlSuffix": "TexasInstruments-OPA2197QDGKRQ1/C2859819"
+        },
+        {
+          "componentCode": "C2867268",
+          "componentModelEn": "OPA2197IDGKR",
+          "componentBrandEn": "Texas Instruments",
+          "stockCount": 10723,
+          "componentSpecificationEn": "VSSOP-8",
+          "componentPrices": [
+            {
+              "startNumber": 1,
+              "endNumber": 9,
+              "productPrice": 1.8677
+            },
+            {
+              "startNumber": 10,
+              "endNumber": 29,
+              "productPrice": 1.6158
+            },
+            {
+              "startNumber": 30,
+              "endNumber": 99,
+              "productPrice": 1.4588
+            },
+            {
+              "startNumber": 100,
+              "endNumber": 499,
+              "productPrice": 1.2985
+            },
+            {
+              "startNumber": 500,
+              "endNumber": 999,
+              "productPrice": 1.2266
+            },
+            {
+              "startNumber": 1000,
+              "endNumber": -1,
+              "productPrice": 1.1955
+            }
+          ],
+          "urlSuffix": "TexasInstruments-OPA2197IDGKR/C2867268"
+        }
+      ]
+    }
+  ],
+  "notes": "Catalog stock and prices are not reserved or an assembly quotation; original P4/power/mux parts traced to v0.4 catalog snapshot."
+}

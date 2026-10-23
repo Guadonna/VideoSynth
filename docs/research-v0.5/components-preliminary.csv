@@ -1,0 +1,16 @@
+﻿block,quantity,candidate_mpn,unit_USD_low_assumption,unit_USD_high_assumption,line_USD_low,line_USD_high,JLC_LCSC_SKU,qualification_status
+Main DSP/UI MCU,1,ESP32-P4NRW32X,9,18,9,18,C54540373,"v3.x, 32 MB PSRAM; previous checked buy catalog, zero stock; procurement allowance"
+Flash,1,W25Q64JVSSIQ or compatible 3.3 V flash,0.7,1.8,0.7,1.8,TBD,Exact boot compatibility and supplier SKU to qualify
+Clock/reset/decoupling,1,"Crystal, reset, decoupling set",2,5,2,5,TBD,Budget allowance; video frequency and jitter to measure
+One video output,1,Buffered 8-bit R-2R + reconstruction + video amplifier + sync/blank priority,4,12,4,12,TBD,Budget for resistor DAC option; no guarantee of 8-bit luminance accuracy; AD9708 alternative costs more
+Control ADC,1,MCP3204-CI/SL,2.7,3.5,2.7,3.5,C32816,4-channel 12-bit SPI; 2 mux outputs and 2 CV inputs; datasheet read
+Potentiometer mux,2,CD74HC4067M96,0.55,0.8,1.1,1.6,C496123,"24 pots on two 16:1 mux; shared address, buffered settling to qualify"
+Two CV front-ends,1,"Scaling/bias, buffers, reference, anti-alias, two input protection paths",6,16,6,16,OPA2197IDR C139363 candidate; other parts TBD,100 Hz band; nominal +-10 V proposed; power-off safety still requires qualification
+TFT display,1,320x240 SPI TFT with GRAM; exact module TBD,7,16,7,16,TBD,Preview and matrix menu; connector and assembly route unqualified
+Potentiometers,24,10 kohm linear; mechanical MPN TBD,0.4,1.2,9.6,28.8,TBD,Original 24 controls retained; panel/THT assembly route to qualify
+Rotary encoders,2,Detented incremental encoder; MPN TBD,1,3,2,6,TBD,Horizontal and vertical cursor; no press action required
+Buttons,8,Six OSC toggles plus MODE and SLOT buttons,0.2,0.5,1.6,4.0,TBD,"Momentary electrical buttons, latched software state; mounting TBD"
+Indicators,6,Simple LED and resistor per OSC; color TBD,0.03,0.12,0.18,0.72,TBD,Monochrome cost baseline; RGB is optional and not included
+External/service connectors,1,"1 RCA, 2 TS, Eurorack 10-pin, self-powered service USB and recovery contacts",3,7,3,7,TBD,USB for firmware only while Eurorack-powered; no USB power path
+Power and interface protection,1,"TPS54302DDCR, TPS62130RGTR, P4 core supply; reverse-polarity/current/ESD protection",8,18,8,18,C311983; C43590; core supply TBD,No power mux or Type-C current controller; core and rail sequencing unqualified
+Other passives/interconnect,1,Bias/filter/buffer/support allowance,4,9,4,9,TBD,"Budget allowance, not a manufacturing BOM"

@@ -1,0 +1,4 @@
+﻿frequency_Hz,order,assumed_corner_Hz,attenuation_dB,note
+100,4,250,0.0028452600835798874,"Ideal fourth-order Butterworth only; tolerances, noise and settling not modeled"
+250,4,250,3.010299956639812,"Ideal fourth-order Butterworth only; tolerances, noise and settling not modeled"
+2000,4,250,72.24719921821516,"Ideal fourth-order Butterworth only; tolerances, noise and settling not modeled"

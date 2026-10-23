@@ -1,0 +1,3 @@
+﻿storage_bits_per_point,width,height,frames_s,field_rate_Hz,active_points_s,frame_bytes,double_frame_bytes,active_MB_s,full_raster_13M5_MB_s,full_raster_27M_MB_s,sixteen_lines_13M5_bytes,note
+8,720,480,29.97002997002997,59.94005994005994,10357642.357642358,345600,691200,10.357642357642357,13.5,27,13728,16-bit storage can carry >8 DAC bits; does not mean 16-bit analog accuracy
+16,720,480,29.97002997002997,59.94005994005994,10357642.357642358,691200,1382400,20.715284715284714,27.0,54,27456,16-bit storage can carry >8 DAC bits; does not mean 16-bit analog accuracy
